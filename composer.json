@@ -6,7 +6,7 @@
   },
   "extra":{
         "map":[
-            ["skin/frontend/default/css/styles.css", "skin/frontend/default/absolutepearls/css/styles.css"]
+            ["skin/frontend/default/absolutepearls", "skin/frontend/default/absolutepearls"]
         ]
    }
 }
