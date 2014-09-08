@@ -1,0 +1,12 @@
+{
+  "name": "webtise/theme",
+  "type": "magento-module",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "extra":{
+        "map":[
+            ["skin/frontend/default/css/styles.css", "skin/frontend/default/absolutepearls/css/styles.css"]
+        ]
+   }
+}
