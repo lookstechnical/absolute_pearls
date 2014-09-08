@@ -7,7 +7,7 @@
   "extra":{
         "map":[
             ["skin/frontend/default/absolutepearls", "skin/frontend/default/absolutepearls"],
-            ["app/design/frontend/absolutepearls", "app/design/frontend/absolutepearls"],
+            ["app/design/frontend/default/absolutepearls", "app/design/frontend/default/absolutepearls"],
             ["app/code/local/Webtiste/Absolutepearls", "app/code/local/Webtiste/Absolutepearls"],
             ["app/etc/modules/Webtiste_Absolutepearls.xml", "app/etc/modules/Webtiste_Absolutepearls.xml"]
             
