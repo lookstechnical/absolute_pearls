@@ -9,7 +9,8 @@
             ["skin/frontend/default/absolutepearls", "skin/frontend/default/absolutepearls"],
             ["app/design/frontend/default/absolutepearls", "app/design/frontend/default/absolutepearls"],
             ["app/code/local/Webtise/Absolutepearls", "app/code/local/Webtise/Absolutepearls"],
-            ["app/etc/modules/Webtise_Absolutepearls.xml", "app/etc/modules/Webtise_Absolutepearls.xml"]
+            ["app/etc/modules/Webtise_Absolutepearls.xml", "app/etc/modules/Webtise_Absolutepearls.xml"],
+            ["demo", "media/demo"]
             
         ]
    }

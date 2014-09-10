@@ -1,0 +1,154 @@
+
+
+nav.desktop{
+	padding:10px 0 5px 0;
+	clear:both;
+	display: none;
+	margin-bottom:10px;
+	
+	ol{
+		list-style: none;
+		margin:0 auto;
+		padding:0;
+		max-width:1170px;
+		display: table;
+		
+		li{
+			display: table-cell;
+			text-align: center;
+			
+			a{
+				text-transform: uppercase;
+				font-size: 1em;
+				color:$nav-color;
+				display: block;
+                padding: 0px 0.8em;
+                @include respond-to(desktop-large){
+	                padding: 0px 1.3em; 
+                }
+			}
+		}
+		
+	    li:first {
+		  text-align: left;
+		} 
+		
+		li:last {
+		  text-align: right;
+		}
+	}
+	@include respond-to(desktop){
+		display:block;
+		@include col(100%,10px,10px);
+	}
+	
+	.mobile-menu-container{
+		@include respond-to(desktop){
+			
+		}
+		ol{
+			display:block;
+			padding:20px 10px
+		}
+		li{
+			display: inline;
+			text-align: left;
+		}
+
+	}
+}
+
+nav.mobile{
+	padding:10px 0 5px 0;
+	clear:both;
+	margin-bottom:10px;
+	
+	li{
+		list-style: none;
+		@include col(16%,5px,5px);
+		@include respond-to(tablet){
+			@include col(25%,10px,10px);
+		}
+
+	}
+	a{
+		display:block;
+		float:left;
+		border:1px solid $dark-blue;
+		height:30px;
+		width:100%;
+		padding:5px;
+		margin:0px 6px 0px 0px;
+		color:$dark-blue;
+		
+	}
+	
+	.menu{
+		@include col(50%,5px,5px);
+		@include respond-to(tablet){
+			@include col(25%,10px,10px);
+		}
+
+	}
+	
+	.menu a{
+		padding:5px 10px 5px 40px;
+		color:white;
+		text-transform: uppercase;
+		background: $dark-blue url(../images/menu-btn.png) 10px 3px no-repeat;
+		
+	}
+	
+	.search a{
+		background: url(../images/searchicon.png) no-repeat center center;
+		text-indent: -9999px;
+		padding:5px 10px 5px 40px;
+		@include respond-to(tablet){
+			background: url(../images/searchicon.png) no-repeat 8px 3px;
+		    text-indent: 0px;
+
+		}
+		
+	}
+	.my-account a{
+		background: url(../images/account-icon.png) no-repeat center center;
+		text-indent: -9999px;
+		padding:5px 10px 5px 40px;
+		@include respond-to(tablet){
+			background: url(../images/account-icon.png) no-repeat 8px 3px;
+		    text-indent: 0px;
+		}
+	}
+	.your-bag a{
+		background: url(../images/bag-icon.png) no-repeat center center;
+		text-indent: -9999px;
+		margin-right:0px;
+		padding:5px 10px 5px 40px;
+		@include respond-to(tablet){
+			background: url(../images/bag-icon.png) no-repeat 8px 3px;
+		    text-indent: 0px;
+		}
+	}
+	
+	@include respond-to(desktop){
+		display:none;
+	}
+}
+
+.breadcrumbs{
+	margin-bottom: 10px;
+	@include respond-to(desktop){
+		@include col(100%,10px,10px);
+	}
+	
+	ul{
+		list-style: none;
+		margin:0;
+		padding: 0;
+		clear:both;
+		font-size: 0.8em;
+		li{
+			float:left;
+		}
+	}
+}

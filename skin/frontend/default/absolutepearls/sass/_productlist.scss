@@ -1,0 +1,61 @@
+/* PRODUCT LIST */
+
+.category-title{
+	text-align: center;
+	margin:20px;
+}
+
+.block-layered-nav{
+	background: $bg-grey;
+	
+	.block-title{
+		padding:10px 20px;
+		background: $blue;
+		color:white;
+		font-family: "Calluna" serif;
+	}
+	.block-content {
+		display:none;
+		padding:10px 20px;
+		@include respond-to(desktop){
+			display: block;
+		}
+	}
+	
+	.block-subtitle{
+		display: none;
+	}
+	
+	ul{
+		list-style: none;
+	}
+	
+	#narrow-by-list{
+		
+		dt{padding:0px 0px 20px;}
+	}
+}
+
+.toolbar{
+	display:none;
+}
+
+.products-grid{
+	margin: 0px;
+	padding:0px;
+	text-align: center;
+	
+	.item{
+		list-style: none;
+		@include respond-to(tablet){
+			@include col(33.3%,0px,0px);
+		}
+		
+		.product-image{
+			border:1px solid $light-grey;
+			display: block;
+			width:100%;
+		}
+	}
+	
+}

@@ -1,0 +1,59 @@
+/* HOMEPAGE TEMPLATE  */
+.cms-home {
+	.main-container .wrapper{
+		text-align: center;
+    }
+	.banner{
+		display: none;
+		@include respond-to(tablet){
+			display: block;
+		}
+		width:100%;
+		img{
+			max-width: 100%;
+		}
+	}
+	.featured-products{
+		h3{
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+	
+	.promos{
+		
+		.left-column{
+			margin-bottom:20px;
+			clear:both;
+			@include respond-to(tablet){
+			clear:none;
+				@include col(50%,0px,10px)
+			}
+		}
+		.right-column{
+			margin-bottom:20px;
+			clear:both;
+			
+			@include respond-to(tablet){
+			clear:none;
+				@include col(50%,10px,0px)
+			}
+		}
+		
+		.promo-1{
+			@include col(100%,0px,0px);
+			img{
+				max-width: 100%;
+			}
+		}
+		.promo-2{
+			@include col(50%,0px,0px);
+			img{
+				max-width: 100%;
+			}
+		}
+		.promo-2:nth-child(3){
+			clear:both;
+		}
+	}
+}

@@ -1,1 +1,67 @@
-.header{width:50%}
+@import "compass";
+@import "compass/css3";
+
+@import "variables";
+@import "mixins";
+@import "global";
+@import "header";
+@import "navigation";
+@import "home";
+@import "productlist";
+@import "product";
+@import "footer";
+
+
+
+
+
+
+/* COL LEFT ! */
+.col3-layout{
+	.col-left{
+		@include respond-to(desktop){
+			@include col(25%,10px,10px);
+		}
+			
+	}
+	
+	.col-right{
+		display:none;
+	}
+	
+	.col-main{
+		@include respond-to(desktop){
+			@include col(75%,10px,10px);
+		}
+	}
+}
+
+
+
+/* SIDE CART */
+#header-cart{
+	padding:20px;
+}
+#cart-sidebar{
+	background: white;
+	border:1px solid $light-grey;
+}
+
+
+/* Jquery extentions */
+
+.sidr {
+  /* Default Settings */
+  display: none;
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  z-index: 999999;
+  width: 260px;
+  overflow-x: none;
+  overflow-y: auto;
+  /* Theme Settings */
+  background: $bg-grey;
+  border:1px solid $light-grey;
+}

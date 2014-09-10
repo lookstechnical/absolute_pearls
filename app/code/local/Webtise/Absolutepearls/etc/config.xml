@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Webtise_Absolutepearls>
+      <version>0.1.0</version>
+    </Webtise_Absolutepearls>
+  </modules>
+  <global>
+    <page>
+      <layouts>
+        <Webtise_Absolutepearls_home translate="label">
+          <label>Home</label>
+          <template>page/home.phtml</template>
+          <layout_handle>home</layout_handle>
+        </Webtise_Absolutepearls_home>
+        <!-- add more layouts here -->
+      </layouts>
+    </page>
+  </global>
+</config>
