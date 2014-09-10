@@ -1,0 +1,53 @@
+<div class="top">
+	<div class="wrapper">
+		<div class="secure-msg-holder">
+			<div class="secure-msg">
+				Secure uk &amp; international delivery
+			</div>
+		</div>
+		<div class="account-links">
+			<a href="#">My Account</a>
+			<a href="#">Sign in</a>
+			<a href="#">Wishlist</a>
+			<a href="#">delivery</a>
+		</div>
+	</div>
+</div>
+<header>
+	<div class="wrapper">
+		<div class="phone">
+			<div class="contact">
+				<h5>Orders and Enquiries</h5>
+				<span class="phonenumber">0151 625 7688</span> <span class="opening-times">Daily 8am-8pm</span>
+			</div>
+		</div>
+		<div class="logo-container">
+			<a class="logo" href="<?php echo $this->getUrl('') ?>">
+	            <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="large" />
+	           <!-- <img src="<?php echo $this->getLogoSrcSmall() ?>" alt="<?php echo $this->getLogoAlt() ?>" class="small" />-->
+	        </a>
+		</div>
+		<div class="search-cart">
+		
+			<div class="header-minicart">
+				<?php echo $this->getChildHtml('minicart_head'); ?>
+			</div>
+	
+			 <?php echo $this->getChildHtml('topSearch') ?>
+		</div>
+	</div>
+</header>
+
+<nav class="desktop">
+ <?php echo $this->getChildHtml('topMenu') ?>
+</nav>
+<nav class="mobile">
+	<li class="menu"><a href="" >Menu</a> </li>
+	<li class="search"><a href="" >Search</a> </li>
+	<li class="my-account"><a href="<?php ?>" >My Account</a></li> 
+	<li class="your-bag skip-cart"><a href="" class="your-bag skip-cart">Your Bag</a></li>
+	<div class="clear"></div>
+</nav>
+<div id="mobile-menu-container"></div>
+
+<?php echo $this->getChildHtml('topContainer'); ?>
