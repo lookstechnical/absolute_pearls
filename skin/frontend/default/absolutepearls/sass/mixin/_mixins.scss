@@ -1,0 +1,43 @@
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-small + 1)  { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-medium) { @content; }
+  }
+  @else if $media == desktop-large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin font-face($style-name, $file, $family, $category:"") {
+    $filepath: "../fonts/" + $family + "/" + $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+    %#{$style-name} {
+        font: {
+            @if $category != "" {
+                family: "#{$style-name}", #{$category};
+            }
+            @else {
+                family: "#{$style-name}";
+                weight: normal;
+            }
+        }
+    }
+}
+
+@mixin col($width,$padl,$padr) {
+	width:$width;
+	padding-left:$padl;
+	padding-right:$padr;
+	position: relative;
+	float:left;
+	box-sizing: border-box;
+}

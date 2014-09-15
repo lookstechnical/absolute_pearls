@@ -1,8 +1,19 @@
 @import "compass";
 @import "compass/css3";
 
+@import "normalize";
 @import "variables";
-@import "mixins";
+@import "mixin/mixins";
+@import "mixin/breakpoint";
+@import "mixin/clearfix";
+@import "mixin/image-replacement";
+@import "mixin/menu";
+@import "mixin/not-selectable";
+@import "mixin/if-resolution";
+@import "mixin/toggle-content";
+@import "mixin/triangle";
+@import "mixin/typography";
+@import "mixin/loading-overlay";
 @import "global";
 @import "header";
 @import "navigation";
@@ -10,10 +21,93 @@
 @import "productlist";
 @import "product";
 @import "footer";
+@import "checkout-cart";
 
 
 
 
+a.button{
+	border:1px solid $dark-blue;
+	padding:5px 25px;
+	float:left;
+	display: block;
+	color:white;
+	background: $dark-blue;
+}
+
+#header-cart{
+	text-align: left;
+	li{
+		list-style: none;
+	}
+	.cart-link{
+		border:1px solid $dark-blue;
+		padding:5px 25px;
+		margin-right:20px;
+		float:left;
+		display: block;
+		color:$dark-blue;
+	}
+	
+	h2{margin-bottom: 20px}
+	
+	#cart-sidebar{
+		
+		
+		
+		.product-name{
+			text-align: left;
+		}
+		
+		.product-image{
+			float: left;
+			margin: 10px;
+			border:1px solid $light-grey;
+		}
+		
+		.btn-edit{
+			display:none;
+		}
+		
+		.product-details{
+			float: left;
+			padding-top: 6px;
+			position: relative;
+			height:81px;;
+			
+			.price-holder{
+				position: absolute;
+				bottom: 0px;
+				left:0px;
+			}
+			
+		}
+		
+		
+		
+		
+		.qty-wrapper{
+			display: none
+		}
+	}
+	
+	.subtotal{
+		margin:10px 0px;
+		.label{
+			float: left;
+			padding:0;
+		}
+		.price{
+			float: right;
+		}
+	}
+	
+	.minicart-actions{
+			clear: both;
+		}
+	
+	
+}
 
 
 /* COL LEFT ! */
@@ -38,14 +132,6 @@
 
 
 
-/* SIDE CART */
-#header-cart{
-	padding:20px;
-}
-#cart-sidebar{
-	background: white;
-	border:1px solid $light-grey;
-}
 
 
 /* Jquery extentions */
@@ -58,7 +144,7 @@
   top: 0;
   height: 100%;
   z-index: 999999;
-  width: 260px;
+  width: 280px;
   overflow-x: none;
   overflow-y: auto;
   /* Theme Settings */

@@ -1,0 +1,150 @@
+
+
+.product-view{
+	position: relative;
+}
+
+.our-promise{
+
+	@include respond-to(desktop){
+		
+		@include col(15%,10px,10px);
+		position: absolute;
+		top:0px;
+		right: 0px;
+		float:right;
+		
+	}
+	
+	.border{
+		background: $blue;
+		padding:5px;
+		
+		.content{
+			background: $light-blue;
+			border:1px solid white;;
+			padding:5px;
+		}
+	}
+}
+	
+.product-essential{
+	@include col(100%,10px,10px);
+	
+	@include respond-to(desktop){
+		@include col(85%,10px,10px);
+	} 
+	
+	
+	
+	.product-img-box{
+		@include respond-to(tablet){
+			@include col(50%,0px,20px);
+		}
+		
+		.product-image{
+			border:1px solid $light-grey;
+			width:100%;
+			position: relative;
+			
+			.product-image-gallery{
+				position: relative;
+				
+				.gallery-image{
+					display: none;
+				}
+				
+				.gallery-image.visible{
+					display: block;
+				}
+			}
+			img{
+				max-width: 100%;
+				max-height: 750px;
+				margin: 0px auto;
+			}
+		}
+		
+		.more-views{
+			clear:both;
+			h2{
+				display: none;
+			}
+			ul{
+				list-style: none;
+				margin-top:20px;
+				li{
+					float:left;
+					margin:0px 10px 0px 0px;
+					border:1px solid $light-grey;
+				}
+			}
+		}
+	}
+	
+	.product-shop{
+		@include respond-to(tablet){
+			@include col(50%,10px,10px);
+		}
+		
+		h1{
+			color: $dark-blue;
+			font-size: 1.2em;
+			font-family: $sans-serif;
+		}
+		
+		.price-info{
+			padding:10px 0px;
+			.price{
+				color: $dark-blue;
+				font-family: $sans-serif;
+				font-size: 1.1em;
+			}
+		}
+		
+		
+	}
+	
+	.add-to-cart-wrapper{
+		margin-top:10px;
+		
+		@include respond-to(tablet){
+			@include col(50%,10px, 10px)
+		}
+	}
+	
+	.qty-wrapper{
+		margin-bottom: 10px;
+		color:$dark-blue;
+		font-size: 0.9em;
+		label{
+			width:34px;
+			display: inline-block	
+		}
+	}
+	
+	.add-to-cart-buttons{
+			
+			.btn-cart{
+				background: $dark-blue;
+				border:1px solid $dark-blue;
+				width:100%;
+				padding:10px 30px;
+				color:white;
+				text-transform: uppercase;
+				font-weight: normal;
+			}
+     }
+     
+     .add-to-cart{
+	     
+	     @include respond-to(desktop){
+		     @include col(50%,0px,10px)
+	     }
+     }
+     .add-to-links{
+	      @include respond-to(desktop){
+		     @include col(50%,10px,0px)
+	     }
+     }
+}
