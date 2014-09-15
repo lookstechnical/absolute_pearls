@@ -1,0 +1,17 @@
+
+/* SIDE CART */
+#header-cart{
+	padding:0px 20px 20px;
+	
+	.continue-shopping{
+		display: block;
+		width:100%;
+		color:$dark-blue;
+		padding:10px 20px;
+		background: url(../images/cart-sidebar-continue-arrow.png) no-repeat 0%;
+	}
+}
+#cart-sidebar{
+	background: white;
+	border:1px solid $light-grey;
+}

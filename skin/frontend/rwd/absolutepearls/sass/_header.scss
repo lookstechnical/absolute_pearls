@@ -58,7 +58,7 @@ header{
 		@include respond-to(desktop){
 			display:block;
 			padding-top:30px;
-			@include col(30%,20px,10px);
+			@include col(30%,10px,10px);
 			background: white;
 			color:$text-color;
 			
@@ -166,7 +166,7 @@ header{
 			}
 			
 			.icon{
-				background: url(../images/bag-icon.png) left bottom;
+				background: url(../images/bag-icon.png) left 43px;
 				width:20px;
 				height:20px;
 				display: inline-block;
