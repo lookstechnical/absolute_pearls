@@ -5,7 +5,9 @@
 }
 
 .our-promise{
-
+	position: relative;
+	float:left;
+	width:100%;
 	@include respond-to(desktop){
 		
 		@include col(15%,10px,10px);
@@ -14,11 +16,16 @@
 		right: 0px;
 		float:right;
 		
+		
 	}
 	
 	.border{
 		background: $blue;
 		padding:5px;
+		
+		@include respond-to(desktop){
+			height:400px;
+		}
 		
 		.content{
 			background: $light-blue;
@@ -29,7 +36,7 @@
 }
 	
 .product-essential{
-	@include col(100%,10px,10px);
+	@include col(100%,0px,0px);
 	
 	@include respond-to(desktop){
 		@include col(85%,10px,10px);
@@ -147,4 +154,60 @@
 		     @include col(50%,10px,0px)
 	     }
      }
+}
+.product-options{
+	margin:10px 0px;
+	p.required{
+		display: none;
+	} 
+	dt{
+		width:34px;
+		float:left;
+	}
+}
+
+.product-options-bottom{
+	.price{
+		display: none;
+	}
+	
+	
+}
+
+.product-collateral{
+	margin-bottom:20px;
+	
+	@include col(100%,0px ,0px);
+
+	@include respond-to(desktop){
+		@include col(41.5%,10px ,10px);
+		top:-86px;
+		left:42.3%;
+	}
+	
+	
+
+	.toggle-tabs{
+		
+		li{
+			border:1px solid $light-grey;
+			padding:5px 20px;
+			width:100%;
+			display: block;
+			cursor: pointer;
+			
+		}
+	}
+	
+	.collateral-tabs{
+		.tab-container{
+			display: none;
+		}
+		.tab{
+			display: none;
+		}
+		.current{
+			display: block;
+		}
+	}
 }

@@ -113,7 +113,7 @@ nav.desktop{
 			  top:-15px; /* value = - border-top-width - border-bottom-width */
 			  bottom:auto;
 			  left:auto;
-			  right:138px; /* controls horizontal position */
+			  right:168px; /* controls horizontal position */
 			  border-width:0 11px 15px;
 			}
 			
@@ -122,7 +122,7 @@ nav.desktop{
 			  top:-13px; /* value = - border-top-width - border-bottom-width */
 			  bottom:auto;
 			  left:auto;
-			  right:141px; /* value = (:before right) + (:before border-right) - (:after border-right) */
+			  right:171px; /* value = (:before right) + (:before border-right) - (:after border-right) */
 			  border-width:0 8px 13px;
 			}
 
@@ -264,7 +264,8 @@ border:none;
 
 
 .breadcrumbs{
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	
 	@include respond-to(desktop){
 		@include col(100%,10px,10px);
 	}
@@ -274,9 +275,18 @@ border:none;
 		margin:0;
 		padding: 0;
 		clear:both;
-		font-size: 0.8em;
 		li{
+			font-size: 0.8em;
 			float:left;
+			a{
+				font-size: 1.1em;
+			}
+			span{
+				color:$link-color;
+				display: inline-block;
+				padding:0px 5px; 
+				font-size: 1.1em;
+			}
 		}
 	}
 }

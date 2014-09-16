@@ -7,6 +7,10 @@
 
 .block-layered-nav{
 	background: $bg-grey;
+	@include respond-to(desktop){
+		background:none;
+	}
+	font-size: 16px;
 	
 	.block-title{
 		padding:10px 20px;
@@ -16,7 +20,8 @@
 			background-image: none;
 		}
 		color:white;
-		font-family: "Calluna" serif;
+		font-family: $serif;
+		font-size: 1.125em;
 	}
 	.block-title.open{
 		background: $blue url(../images/arrow-down-shop-by.png) no-repeat 98% 50%;
@@ -30,6 +35,7 @@
 		padding:10px 20px;
 		@include respond-to(desktop){
 			display: block;
+			padding:0px 0px;
 		}
 	}
 	
@@ -42,27 +48,43 @@
 	}
 	
 	#narrow-by-list{
+		font-size: 0.8125em;
 		list-style: none;
 		ol{
 			li{
 			list-style: none;
 			}
 		}
+		
 		dt{
 			padding:0px 0px 20px;
 			list-style: none;
+			text-transform: uppercase;
+			color:$text-color;
 		}
 		dd{
 			list-style: none;
 		}
 		.filter_section{
-			margin-bottom:30px;
+			background: $bg-grey;
+			margin-bottom:20px;
 			color:$blue;
+			
+			@include respond-to(desktop){
+				display: block;
+				padding:10px 10px;
+				
+		     }
 			
 			.count{
 				display: inline-block;
 				padding:0px 5px;
 				color:$text-color;
+			}
+			
+			.filter_section{
+				padding: 0px;
+				margin: 0px;
 			}
 		}
 		
@@ -86,11 +108,82 @@
 	}
 }
 
+
+
 .toolbar{
-	display:none;
+	//display:none;
+	clear:both;
+	width:100%;
+	font-size: 0.8em;
+	
+	.view-mode{
+		.grid{
+			background: url(../images/grid.png) no-repeat;
+			margin:0px 5px;
+			width:25px;
+			height: 25px;
+			text-indent: -99999px;
+			display: inline-block;
+			top:-2px;
+			position: relative;
+		}
+		.list{
+			background: url(../images/list.png) no-repeat;
+			margin:0px 5px;
+			width:25px;
+			height: 25px;
+			text-indent: -99999px;
+			display: inline-block;
+			top:-2px;
+			position: relative;
+		}
+		.grid-list{
+			background: url(../images/grid-list.png) no-repeat;
+			margin:0px 5px;
+			width:25px;
+			height: 25px;
+			text-indent: -99999px;
+			display: inline-block;
+			top:-2px;
+			position: relative;
+		}
+	}
+	
+	.pager{
+		float:left;
+		width:50%
+	}
+	
+	.sorter{
+		text-align: right;
+		width:50%;
+		float:right;	
+		
+		.view-mode{
+			float:left;
+			width:50%;
+		}
+		.sort-by{
+			float:left;
+			width:50%;
+		}
+		.v-middle{
+			display:none;
+		}
+	}
+}
+
+.toolbar-bottom{
+	.view-mode{
+		display: none
+	}
+	.sort-by{
+		display: none;
+	}
 }
 
 .products-grid{
+	clear:both;
 	margin: 0px;
 	padding:0px;
 	text-align: center;
@@ -109,7 +202,6 @@
 			border-bottom:1px solid $light-grey;
 			display: block;
 			width:100%;
-			height:284px;
 			overflow: hidden;
 			
 			img{
@@ -123,18 +215,20 @@
 		}
 		
 		.product-name{
+			font-size: 16px;
 			padding:20px 20px 0px 20px;
 			a{
 				color:$text-color;
-				font-size: 0.7em;
+				font-size: 0.8125em;
+				font-family:$sans-serif;
 			}
 		}
 		
 		
 		.price-box{
-			
+			font-size: 16px;
 			.price{
-				font-size:1.2em;
+				font-size:0.875em;
 			}
 			.old-price{
 				display: inline-block;
@@ -158,5 +252,55 @@
 			}
 		}
 	}
+	.item.last{
+		.product-image{
+			border-right: 1px solid $light-grey;
+		}
+	}
 	
+	.item:last-child{
+		.product-image{
+			border-right: 1px solid $light-grey;
+		}
+	}
+	
+}
+
+.products-grid-max-3-col{
+	.item{
+		@include respond-to(tablet){
+			@include col(33.3,0px,0px);
+		}
+	}
+}
+
+.products-grid-max-4-col{
+	.item{
+		@include respond-to(tablet){
+			@include col(25%,0px,0px);
+		}
+	}
+}
+
+.amshopby-filters-left{
+	.from{
+		@include col(40%,0px, 10px);
+	}
+	.to{
+		@include col(40%,0px, 10px);
+	}
+	.submit{
+		@include col(40%,0px, 0px);
+	}
+}
+#amshopby-price-url{
+	
+}
+#amshopby-price-from{
+	width:100%;
+	padding:5px 10px;
+}
+#amshopby-price-to{
+	width:100%;
+	padding:5px 10px;
 }

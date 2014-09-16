@@ -12,8 +12,8 @@ html {
 @include font-face('Lato', 'Lato-Regular', 'Lato', 'sans-serif');
 @include font-face('Calluna', 'Calluna-Regular-webfont', 'Calluna', 'serif');
 
-$sans-serif:'Lato' ,sans-serif;
-$serif:'Calluna' ,serif;
+$sans-serif:"Lato" sans-serif;
+$serif:"Calluna" serif;
 
 body{
 	margin:0;
