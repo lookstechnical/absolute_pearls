@@ -2,21 +2,15 @@
 
 $this->startSetup();
 
-$this->run("INSERT INTO `cms_block` (`block_id`, `title`, `identifier`, `content`, `creation_time`, `update_time`, `is_active`)
+$this->run("INSERT INTO `cms_block` ( `title`, `identifier`, `content`, `creation_time`, `update_time`, `is_active`)
 VALUES
-	(9, 'Company info links', 'company-info-links', '<ul>\r\n<li><a href=\"about-us\">About us</a></li>\r\n<li><a href=\"pearl%20buying%20tips\">Pearl buying tips</a></li>\r\n<li><a href=\"gift%20and%20message%20card%20service\">Gift and message card service</a></li>\r\n<li><a href=\"/testimonials\">testimonials</a></li>\r\n<li><a href=\"/certificate-of-authenticity\">certificate of authenticity</a></li>\r\n<li><a href=\"/contact-us\">contact us</a></li>\r\n<li><a href=\"/blog\">the blog</a></li>\r\n</ul>', '2014-09-08 16:15:27', '2014-09-08 16:15:27', 1),
-	(5, 'Home Banner', 'home-banner', '<p><img title=\"main banner\" src=\"{{media url=\"wysiwyg/home/main-banner.png\"}}\" alt=\"home bannner\" /></p>', '2014-09-08 19:15:38', '2014-09-08 19:16:09', 1),
-	(6, 'Customer Services Links', 'customer-services-links', '<ul>\r\n<li><a href=\"/t-and-c\">T&amp;C&rsquo;s</a></li>\r\n<li><a href=\"/online-ordering-and-security\">Online ordering &amp; security</a></li>\r\n<li><a href=\"/delivery\">Delivery</a></li>\r\n<li><a href=\"/returns\">Returns</a>&nbsp;</li>\r\n<li><a href=\"/privacy\">Privacy</a>&nbsp;</li>\r\n<li><a href=\"/cookies\">Cookies</a></li>\r\n<li><a href=\"caring-for-your-pearls\">Caring for your pearls</a></li>\r\n<li><a href=\"/pearl-restringing-service\">Pearl re-stringing service</a></li>\r\n</ul>', '2014-09-08 21:01:32', '2014-09-08 21:01:32', 1),
-	(7, 'Contact Us Links', 'contact-us-links', '<p class=\"p1\"><span class=\"s2\">e.</span><a href=\"mailto:service@absolutepearls.co.uk\"><span class=\"s1\"> service@absolutepearls.co.uk</span></a></p>\r\n<p class=\"p4\"><span class=\"s1\"><br /></span></p>\r\n<p class=\"p4\"><span class=\"s1\">t. </span><span class=\"s3\"><strong>0151 625 7688</strong></span><span class=\"s1\"> daily 8am-8pm&nbsp;</span></p>\r\n<p class=\"p5\"><span class=\"s1\">m. </span><span class=\"s3\"><strong>07803 172 096</strong></span><span class=\"s1\"> at any time</span></p>\r\n<ul>\r\n<li><a class=\"facebook\" href=\"facebook\">facebook</a></li>\r\n<li><a class=\"twitter\" href=\"twitter\">twitter</a></li>\r\n<li><a class=\"google\" href=\"google\">google</a></li>\r\n<li><a class=\"pinterest\" href=\"pinterest\">pinterest</a></li>\r\n<li><a class=\"instagram\" href=\"instagram\">instagram</a>&nbsp;</li>\r\n</ul>\r\n<p><a href=\"http://absoluteblog.com\">absoluteblog.com</a></p>', '2014-09-08 21:30:21', '2014-09-09 14:45:51', 1),
-	(8, 'Security Icons', 'security-icons', '<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"{{media url=\"wysiwyg/home/security-icons.png\"}}\" alt=\"\" /></p>', '2014-09-08 21:35:09', '2014-09-08 21:35:09', 1);
+	( 'Company info links', 'company-info-links', '<ul>\r\n<li><a href=\"about-us\">About us</a></li>\r\n<li><a href=\"pearl%20buying%20tips\">Pearl buying tips</a></li>\r\n<li><a href=\"gift%20and%20message%20card%20service\">Gift and message card service</a></li>\r\n<li><a href=\"/testimonials\">testimonials</a></li>\r\n<li><a href=\"/certificate-of-authenticity\">certificate of authenticity</a></li>\r\n<li><a href=\"/contact-us\">contact us</a></li>\r\n<li><a href=\"/blog\">the blog</a></li>\r\n</ul>', '2014-09-08 16:15:27', '2014-09-08 16:15:27', 1),
+	( 'Home Banner', 'home-banner', '<p><img title=\"main banner\" src=\"{{media url=\"wysiwyg/home/main-banner.png\"}}\" alt=\"home bannner\" /></p>', '2014-09-08 19:15:38', '2014-09-08 19:16:09', 1),
+	( 'Customer Services Links', 'customer-services-links', '<ul>\r\n<li><a href=\"/t-and-c\">T&amp;C&rsquo;s</a></li>\r\n<li><a href=\"/online-ordering-and-security\">Online ordering &amp; security</a></li>\r\n<li><a href=\"/delivery\">Delivery</a></li>\r\n<li><a href=\"/returns\">Returns</a>&nbsp;</li>\r\n<li><a href=\"/privacy\">Privacy</a>&nbsp;</li>\r\n<li><a href=\"/cookies\">Cookies</a></li>\r\n<li><a href=\"caring-for-your-pearls\">Caring for your pearls</a></li>\r\n<li><a href=\"/pearl-restringing-service\">Pearl re-stringing service</a></li>\r\n</ul>', '2014-09-08 21:01:32', '2014-09-08 21:01:32', 1),
+	( 'Contact Us Links', 'contact-us-links', '<p class=\"p1\"><span class=\"s2\">e.</span><a href=\"mailto:service@absolutepearls.co.uk\"><span class=\"s1\"> service@absolutepearls.co.uk</span></a></p>\r\n<p class=\"p4\"><span class=\"s1\"><br /></span></p>\r\n<p class=\"p4\"><span class=\"s1\">t. </span><span class=\"s3\"><strong>0151 625 7688</strong></span><span class=\"s1\"> daily 8am-8pm&nbsp;</span></p>\r\n<p class=\"p5\"><span class=\"s1\">m. </span><span class=\"s3\"><strong>07803 172 096</strong></span><span class=\"s1\"> at any time</span></p>\r\n<ul>\r\n<li><a class=\"facebook\" href=\"facebook\">facebook</a></li>\r\n<li><a class=\"twitter\" href=\"twitter\">twitter</a></li>\r\n<li><a class=\"google\" href=\"google\">google</a></li>\r\n<li><a class=\"pinterest\" href=\"pinterest\">pinterest</a></li>\r\n<li><a class=\"instagram\" href=\"instagram\">instagram</a>&nbsp;</li>\r\n</ul>\r\n<p><a href=\"http://absoluteblog.com\">absoluteblog.com</a></p>', '2014-09-08 21:30:21', '2014-09-09 14:45:51', 1),
+	( 'Security Icons', 'security-icons', '<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"{{media url=\"wysiwyg/home/security-icons.png\"}}\" alt=\"\" /></p>', '2014-09-08 21:35:09', '2014-09-08 21:35:09', 1);
 
-INSERT INTO `cms_block_store` (`block_id`, `store_id`)
-VALUES
-	(9, 0),
-	(5, 0),
-	(6, 0),
-	(7, 0),
-	(8, 0);
+
 	
 DELETE * FROM `cms_page` where `title` = 'Home Page';
 
