@@ -1,0 +1,18 @@
+<?php
+
+$images = $this->getInstagramImages();?>
+<div class="instagram-slider">
+<h3>#<?php echo $this->getHashtag() ?><span class="underline"></span></h3>
+<p>tag a photo on <span></span> for a chance to be featured in our gallery</p>
+<ul>
+<?php foreach($images as $image):?>
+
+<li class="">
+	<img src="<?php echo $image['low_res']?>" />
+</li>
+
+<?php endforeach; ?>
+<li class="clear"></li>
+</ul>
+<a class="link-button" href="view_more">view more</a>
+</div>

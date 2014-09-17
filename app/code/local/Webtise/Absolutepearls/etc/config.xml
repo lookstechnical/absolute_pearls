@@ -2,10 +2,46 @@
 <config>
   <modules>
     <Webtise_Absolutepearls>
-      <version>0.1.0</version>
+      <version>1.0.0</version>
     </Webtise_Absolutepearls>
   </modules>
   <global>
+  	 <models>
+            <absolutepearls>
+                <class>Webtise_Absolutepearls_Model</class>
+                <resourceModel>absolutepearls_mysql4</resourceModel>
+            </absolutepearls>
+            <absolutepearls_mysql4>
+                <class>Webtise_Absolutepearls_Model_Mysql4</class>
+            </absolutepearls_mysql4>
+  	 </models>
+  	  <resources>
+            <absolutepearls_setup>
+                <setup>
+                    <module>Webtise_Absolutepearls</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </absolutepearls_setup>
+            
+            <absolutepearls_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </absolutepearls_write>
+            
+            <absolutepearls_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </absolutepearls_read>
+        </resources>
+         <blocks>
+            <absolutepearls>
+                <class>Webtise_Absolutepearls_Block</class>
+            </absolutepearls>
+         </blocks>
     <page>
       <layouts>
         <Webtise_Absolutepearls_home translate="label">

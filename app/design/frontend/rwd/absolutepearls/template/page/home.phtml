@@ -87,20 +87,15 @@
 							</div>
 						</section>
 						<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('promos')->toHtml(); ?>
-
+						
 					</div>
                    
-                   <div class="featured-products">
-	                   <h3>This week we love!</h3>
-	                   <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('featured-products')->toHtml(); ?>
-
-                   </div>
+                    <?php echo $this->getChildHtml('featured_slider'); ?>
                    
-                   <div class="instagram">
-	                   	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('instagram')->toHtml(); ?>
-                   </div>
-                   
-                    <?php echo $this->getChildHtml('content') ?>
+                    <?php echo $this->getChildHtml('instagram_slider'); ?>
+                    <div class="main-content">
+                       <?php  echo $this->getChildHtml('content') ?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -198,6 +198,18 @@
             <action method="setLayoutCode"><name>empty</name></action>
         </reference>
     </page_empty>
+    
+    <home>
+    	<reference name="root">
+    		<block type="absolutepearls/instagram_slider" name="instagram_slider" as="instagram_slider" template="instagram/slider.phtml" />
+			<block type="absolutepearls/featured_slider" name="featured_slider" as="featured_slider" template="featured/slider.phtml" >
+				    <block type="core/text_list" name="product_list.name.after" as="name.after" />
+                    <block type="core/text_list" name="product_list.after" as="after" />
+			</block>
+
+    	</reference>
+    
+    </home>
 
     <page_one_column translate="label">
         <label>All One-Column Layout Pages</label>

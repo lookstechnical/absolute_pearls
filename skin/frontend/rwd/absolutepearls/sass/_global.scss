@@ -7,7 +7,7 @@ html {
   margin:0px;
 }
 
-.clear{clear:both;}
+.clear{clear:both;display: block}
 
 @include font-face('Lato', 'Lato-Regular', 'Lato', 'sans-serif');
 @include font-face('Calluna', 'Calluna-Regular-webfont', 'Calluna', 'serif');
@@ -60,4 +60,13 @@ p{padding-bottom: 10px}
 	top:10px;
 	color:$red;
 	text-align:center;
+}
+
+.link-button{
+	display: inline-block;
+	border:1px solid $text-color;
+	color: $text-color;
+	font-size: 1em;
+	padding:10px 40px;
+	text-transform: uppercase;
 }

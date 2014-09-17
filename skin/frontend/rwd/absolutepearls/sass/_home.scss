@@ -1,3 +1,4 @@
+
 /* HOMEPAGE TEMPLATE  */
 .cms-home {
 	.main-container .wrapper{
@@ -55,5 +56,121 @@
 		.promo-2:nth-child(3){
 			clear:both;
 		}
+	}
+	
+	.instagram-slider{
+		background: $bg-grey;
+		padding:20px 100px;
+		clear:both;
+		h3{
+			text-transform: uppercase;
+			margin-bottom: 20px;
+			font-family: $sans-serif;
+			width:178px;
+			margin:0 auto;
+			margin-bottom: 20px;
+			
+			
+		}
+		
+				
+		ul{
+			list-style: none;
+			margin: 0px;
+			padding:0px;
+			clear:both;
+			width:100%;
+			li{
+				display: block;
+				float:left;
+				width:100%;
+				
+				@include respond-to(tablet){
+					clear:none;
+					@include col(25%,10px,10px)
+				}
+				@include respond-to(desktop){
+					clear:none;
+					@include col(20%,10px,10px)
+				}
+				
+				img{
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.featured_products{
+	clear:both;
+	display: none;
+	padding:0px 30px;
+	position: relative;
+	@include respond-to(tablet){
+		display:block;
+	}
+	.next-link{
+		background: url(../images/right-arrow-simple.png) no-repeat;
+		position:absolute;
+		top:50%;
+		width:20px;
+		height:50px;
+		
+	}
+	.prev-link{
+		background: url(../images/left-arrow-simple.png) no-repeat;
+		position:absolute;
+		top:50%;
+		width:20px;
+		height:50px;
+	}
+	
+	h2{
+		margin-bottom: 20px;
+	}
+	.products-grid{
+		.item{
+			@include respond-to(tablet){
+					@include col(33.3%,0px,0px)
+			}
+			@include respond-to(desktop){
+				@include col(25%,0px,0px)
+			}
+				
+		}
+		
+	}
+	.products-grid:last-child{
+			border-right: 1px solid $light-grey
+		}
+}
+
+.underline{
+	padding-top:20px;
+	width:50%;
+	display: block;
+	margin:0 auto;
+	border-bottom: 1px solid $text-color;
+}
+
+.main-content{
+	clear:both;
+	padding:40px 20px;
+	@include respond-to(tablet){
+		padding:40px 100px;
+	}
+	h1{
+		width:100%;
+		margin-top: 20px;
+		padding-bottom: 20px;
+		line-height: 1em;
+		@include respond-to(tablet){
+			width:411px;
+			margin:0 auto;
+			margin-top: 20px;
+			line-height: 0.2em;
+		}
+		
 	}
 }
