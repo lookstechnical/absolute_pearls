@@ -15,3 +15,232 @@
 	background: white;
 	border:1px solid $light-grey;
 }
+
+.cart{
+	width:100%;
+	margin-bottom: 20px;
+	
+	@include respond-to(desktop){
+		@include col(75%,10px, 10px);
+	}
+	.page-title{
+		text-transform: uppercase;
+		margin-bottom:10px;
+		width:100%;
+		
+		h1{
+			width:100%;
+			@include respond-to(tablet){
+				@include col(66.6%,0px, 0px);
+				text-align: left;
+			    float:left;
+			    line-height: 1.8em;
+			}
+			
+		}
+
+		.checkout-types{
+			width:100%;
+			margin:10px 0px;
+			@include respond-to(tablet){
+				@include col(33.3%,0px, 0px);
+				text-align: right;
+			    float:right;
+			}
+			
+		}
+
+	}
+	
+	.page-title:after{
+		content:"";
+		display: block;
+		clear: both;
+	}
+	
+	.footer{
+		border-top:1px solid $light-grey;
+		border-bottom:1px solid $light-grey;
+		padding:20px 0px;
+		margin-top: 20px;
+	}
+	.cart-table{
+		clear:both;
+		padding:0px;
+		fieldset{
+				padding:0px;
+			}	
+		table{
+			width:100%;
+			
+			
+			
+			th{
+				border-top:1px solid $light-grey;
+				border-bottom:1px solid $light-grey;
+				text-align: left;
+				margin-bottom: 10px;
+				padding:10px 0px;
+				text-transform: uppercase;
+			}
+			
+			.product-cart-image{
+				padding:10px 0px;
+				width:10%;
+				img{
+					border:1px solid $light-grey;
+				}
+			}
+			
+			.product-cart-info{
+				padding:10px 10px;
+				vertical-align: top;
+				width:70%;
+				.product-name{
+					font-family: $sans-serif;
+					font-size: 1em;
+					a{
+						color:$text-color;
+						font-size: 0.8em;
+					}
+				}
+			}
+			.product-cart-qty{
+				padding:0px 10px 0px 0px;
+				a{
+					display: block
+				}
+			}
+		}
+	}
+	.totals{
+		
+		@include respond-to(tablet){
+			@include col(33.3%,0px, 0px);
+			float:right;
+		}
+	}
+	
+	.acepted-cards{
+		
+		
+		p{
+			display: inline-block;
+		}
+		img{
+			vertical-align: middle;
+		}
+		
+		@include respond-to(desktop){
+			@include col(50%,10px, 0px);
+			
+		}
+		
+		
+		
+	}
+	
+	.discount-codes{
+	
+		
+		width:100%;
+		text-align: left;
+		
+		@include respond-to(tablet){
+			text-align: right;
+		}
+		
+		@include respond-to(desktop){
+			@include col(50%,10px, 0px);
+		}
+		
+		h2{
+		   display: none;
+		}
+		label{
+			display: inline-block;
+		}
+		.field-wrapper,button-wrapper{
+			display: inline-block;
+		}
+		input[type=text]{
+			display: inline-block;
+			width: 80%;
+			margin-left: 10px;
+			padding: 7px 10px;
+			margin-bottom: 0px;
+		}
+		.field-wrapper{
+			width: 73%;
+		}
+		.button-wrapper{
+			display: inline-flex;
+			left: -4px;
+			position: relative;
+			
+			button{
+				width:30px;
+				height:30px;
+				background: white;
+				border:1px solid black;
+				padding:5px;
+				background: url(../images/right-arrow-simple.png) center center no-repeat;
+			}
+		}
+	}
+	
+	.footer:after{
+		content: "";
+		display:block;
+		clear:both;
+	}
+	
+	
+	#shopping-cart-totals-table{
+		width:100%;
+		margin:20px 0px;
+		tfoot{
+			td{
+				
+				font-size: 1.5em;
+			}
+		}
+		td{
+			padding:4px 0px;
+		}
+	}
+	
+	.a-right{
+		text-align: right;
+	}
+	.a-left{
+		text-align: left;
+	}
+	.checkout-types{
+		list-style: none;
+		text-align: right;
+		
+		.button{
+			width: 100%;
+			font-family: $sans-serif;
+			font-size: 1.1em;
+			text-transform: uppercase;
+			padding:10px 0px;
+			text-align: center;
+			margin-bottom: 10px
+		}
+	}
+	
+	
+	.btn-checkout {
+		span{
+			background: $dark-blue url(../images/padlock.png)  no-repeat; 
+			display: inline-block;
+			padding-left: 20px;
+			
+			span{
+				background: none;
+			}
+		}
+	}
+}

@@ -6,6 +6,7 @@
     </Webtise_Absolutepearls>
   </modules>
   <global>
+ 
   	 <models>
             <absolutepearls>
                 <class>Webtise_Absolutepearls_Model</class>
@@ -13,7 +14,12 @@
             </absolutepearls>
             <absolutepearls_mysql4>
                 <class>Webtise_Absolutepearls_Model_Mysql4</class>
-            </absolutepearls_mysql4>
+                <entities>
+                    <promo>
+                        <table>webtise_promos</table>
+                    </promo>
+                </entities>
+            </absolutepearls_mysql4>           
   	 </models>
   	  <resources>
             <absolutepearls_setup>
@@ -53,4 +59,50 @@
       </layouts>
     </page>
   </global>
+   <admin>
+        <routers>
+			<promos>
+				<use>admin</use>
+				<args>
+					<module>Webtise_Absolutepearls</module>
+					<frontName>promos</frontName>
+				</args>
+			</promos>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<cms>
+				<children>
+				 <absolutepearls_promo module="cms">
+				  <title>Promos</title>
+					<sort_order>71</sort_order>     
+					<action>promos/adminhtml_promos</action>  
+				  </absolutepearls_promo>        
+				</children>
+			</cms>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Webtise_Absolutepearls>
+							<title>Promos Module</title>
+							<sort_order>10</sort_order>
+						</Webtise_Absolutepearls>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<promos>
+					<file>promos.xml</file>
+				</promos>
+			</updates>
+		</layout>
+    </adminhtml> 
 </config>

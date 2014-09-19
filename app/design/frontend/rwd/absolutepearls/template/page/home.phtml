@@ -59,35 +59,46 @@
 					
 					<div class="promos">
 						<section class="left-column">
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-2.png" alt="Slice-2" >
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-8.png" alt="Slice-3" >
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-7.png" alt="Slice-3">
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-4.png" alt="Slice-3">
-							</div>
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-first');
+								echo $block->toHtml();
+							?>
 						</section>
 						<section class="right-column">
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-3.png" alt="Slice-3">
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-9.png" alt="Slice-3">
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-5.png" alt="Slice-3">
-							</div>
-							<div class="promo-2 promo">
-								<img src="/media/demo/home/Slice-6.png" alt="Slice-3">
-							</div>
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-second');
+								echo $block->toHtml();
+							?>
+							
 						</section>
-						<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('promos')->toHtml(); ?>
-						
+						<section class="left-column">
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-third');
+								echo $block->toHtml();
+							?>
+						</section>
+						<section class="right-column">
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-fourth');
+								echo $block->toHtml();
+							?>
+							
+						</section>
+						<section class="left-column realign-top">
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-five');
+								echo $block->toHtml();
+							?>
+						</section>
+						<section class="right-column">
+							<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-six');
+								echo $block->toHtml();
+							?>
+							
+						</section>
+
+													
 					</div>
                    
                     <?php echo $this->getChildHtml('featured_slider'); ?>

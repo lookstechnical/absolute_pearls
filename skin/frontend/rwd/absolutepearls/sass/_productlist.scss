@@ -70,10 +70,15 @@
 			margin-bottom:20px;
 			color:$blue;
 			
+			
 			@include respond-to(desktop){
 				display: block;
 				padding:10px 10px;
 				
+		     }
+		     
+		     a{
+			     margin-bottom:5px;
 		     }
 			
 			.count{
@@ -92,18 +97,7 @@
 			
 		}
 		
-		input[type="checkbox"] {
-		    display:none;
-		}
-		input[type="checkbox"] + label span {
-		    display:inline-block;
-		    width:19px;
-		    height:19px;
-		    background:url(../images/checkbox.png) left top no-repeat;
-		}
-		input[type="checkbox"]:checked + label span {
-		    background:url(../images/checkbox.png) -19px top no-repeat;
-		}
+		
 		
 	}
 }

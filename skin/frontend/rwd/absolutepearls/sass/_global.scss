@@ -70,3 +70,34 @@ p{padding-bottom: 10px}
 	padding:10px 40px;
 	text-transform: uppercase;
 }
+
+button{
+	border: 1px solid $dark-blue;
+	padding: 5px 25px;
+	float: left;
+	display: block;
+	color: white;
+	background: $dark-blue;
+}
+
+.success-msg{
+	background: $success-color;
+	color:white;
+	padding:10px;
+	
+	li{
+		background: url(../images/success.png) no-repeat left center;
+		padding-left: 20px;
+	}
+}
+
+.error-msg{
+	background: $error-color;
+	color:white;
+	padding:10px;
+	li{
+		background: url(../images/alert.png) no-repeat left center;
+		padding-left: 20px;
+	}
+
+}

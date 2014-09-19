@@ -41,6 +41,7 @@
 			<input type="checkbox" id="<?php echo str_replace(' ','-',$_item->getName()); ?>" name="vehicle" onclick='window.location.assign("<?php echo $this->urlEscape($_item->getUrl()) ?>")'/>
 		</span>
 		<label for="<?php echo str_replace(' ','-',$_item->getName()); ?>">
+			<span></span>
 			<span class="label"><?php echo $_item->getLabel() ?><span>
 			<span class="count">(<?php echo $_item->getCount() ?>)</span>
 		</label>

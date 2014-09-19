@@ -10,7 +10,8 @@
             ["app/design/frontend/rwd/absolutepearls", "app/design/frontend/rwd/absolutepearls"],
             ["app/code/local/Webtise/Absolutepearls", "app/code/local/Webtise/Absolutepearls"],
             ["app/etc/modules/Webtise_Absolutepearls.xml", "app/etc/modules/Webtise_Absolutepearls.xml"],
-            ["demo", "media/demo"]
+            ["demo", "media/demo"],
+            ["promos", "media/promos"]
             
         ]
    }

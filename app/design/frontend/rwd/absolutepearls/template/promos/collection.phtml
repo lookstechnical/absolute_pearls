@@ -1,0 +1,28 @@
+<?php
+
+$collection = $this->getCollection();?>
+
+<div class="promo-collection">
+<?php foreach($collection as $promo): ?>
+
+<div class="promo <?php echo $promo['style'] ?>">
+	<!--<div class="content">
+ <?php if(isset($promo['title'])) : ?>
+	<h2 class="title"><?php echo $promo['title'] ?></h2>
+<?php endif; ?>
+<?php if(isset($promo['sub_title'])) : ?>
+	<h5 class="sub-title"><?php echo $promo['sub_title'] ?></h5>
+	<?php endif; ?>-->
+	<?php if(isset($promo['image'])) : ?>
+	<a href="<?php echo $promo['link'] ?>"><img src="<?php echo Mage::getBaseUrl('media') . DS .'promos' . DS;?><?php echo $promo['image'] ?>" /></a>
+	<?php endif; ?>
+	<!--<?php if(isset($promo['button'])) : ?>
+	<a href="" class="btn"><?php echo $promo['button'] ?></a>
+	<?php endif; ?>
+	</div>-->
+</div>
+
+
+<?php endforeach; ?>
+<div class="clear"></div>
+</div>

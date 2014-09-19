@@ -1,0 +1,87 @@
+fieldset{
+	border:none;
+}
+
+p.required{
+	display: none;
+}
+
+input[type=text],input[type=email],input[type=password],input[type=tel]{
+	padding:5px 10px;
+	font-size: 0.8em;
+	width:100%;
+	margin-bottom: 10px;
+}
+
+.check-box{
+	width:100%
+}
+
+select{
+	margin-bottom:10px;
+}
+
+input[type=checkbox],input[type=radio]{
+	display:none;
+}
+
+.required{
+	em{
+		float:right;
+		color:$red;
+	}
+}
+
+input[type=checkbox] + label,input[type=radio] + label  {
+    display:inline-block;
+    color:$light-blue;
+    vertical-align:middle;
+    background:url(../images/checkbox.png) left bottom no-repeat;
+    cursor:pointer;
+    padding:0px 0px 0px 20px;
+    line-height: 1em;
+    margin-bottom:10px;
+}
+input[type=checkbox]:checked + label ,input[type=radio]:checked + label  {
+    background:url(../images/checkbox.png) left top no-repeat;
+    padding:0px 0px 0px 20px;
+}
+
+div.block-layered-nav dd a.amshopby-attr-selected{
+	background:url(../images/checkbox.png) left top no-repeat;
+	padding:0px 0px 0px 20px;
+}
+
+div.block-layered-nav dd a.amshopby-attr{
+	background:url(../images/checkbox.png) left bottom no-repeat;
+	padding:0px 0px 0px 20px;
+}
+
+.block-layered-nav #narrow-by-list ol li{
+	color:black;
+	line-height: 1em;
+}
+.amshopby-filters-left{
+	.currently{
+		display: none;
+	}
+	.actions{
+		display: none;
+	}
+}
+
+#checkout-review-table{
+	width: 100%
+}
+
+.block-progress{
+	
+	dl{
+		margin:20px 0px;
+	
+		div{
+			border:1px solid $light-grey;
+		}	
+	}
+	
+}
