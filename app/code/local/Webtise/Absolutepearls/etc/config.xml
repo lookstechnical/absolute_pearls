@@ -2,7 +2,7 @@
 <config>
   <modules>
     <Webtise_Absolutepearls>
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </Webtise_Absolutepearls>
   </modules>
   <global>
@@ -19,12 +19,23 @@
                         <table>webtise_promos</table>
                     </promo>
                 </entities>
-            </absolutepearls_mysql4>           
+            </absolutepearls_mysql4> 
+            <catalog>
+	            <rewrite>
+	            	<category>Webtise_Absolutepearls_Model_Catalog_Category</category>
+	            </rewrite>
+            </catalog> 
+            <catalog_resource>
+            	<rewrite>
+	            	<category>Webtise_Absolutepearls_Model_Catalog_Resource_Category</category>
+	            </rewrite>
+            </catalog_resource>       
   	 </models>
   	  <resources>
-            <absolutepearls_setup>
+           <absolutepearls_setup>
                 <setup>
                     <module>Webtise_Absolutepearls</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
                 </setup>
                 <connection>
                     <use>core_setup</use>

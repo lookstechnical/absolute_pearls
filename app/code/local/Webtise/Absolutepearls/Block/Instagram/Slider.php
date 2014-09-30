@@ -16,7 +16,7 @@ class Webtise_Absolutepearls_Block_Instagram_Slider extends Mage_Core_Block_Temp
 	
 	public function getInstagramImages()
 	{
-			$this->hashtag = "absolutepearls";
+			$this->hashtag = "pearls";
 			$client_id ="bb7813192f5c44828cf925c88da3b8de";
 			$url = 'https://api.instagram.com/v1/tags/'.$this->hashtag.'/media/recent?client_id='.$client_id;
 			$ch = curl_init($url); 

@@ -1,0 +1,167 @@
+.category-header{
+	padding:0px 15px;
+	margin: 0px ;
+	.content{
+	padding:60px 20px;
+	background: $bg-grey;
+	height: 223px;
+	text-align: center;
+	   .category-title{
+		   margin:0px;
+		   padding:0px 0px 0px;
+		   
+		   h1{
+			 font-size: 2em;
+			 display:inline-block;
+			
+		   }
+		   h1:after{
+				 content:"";
+				 display:block;
+				 border-bottom: 1px solid black;
+				 width:80%;
+				 margin: 20px auto 5px;
+				 
+		    }  
+	   }
+	}
+}
+
+.category-image{
+	background: $bg-grey;
+	height: 223px;
+	margin-bottom: 20px;
+	margin-left: 15px;
+	
+}
+
+
+.category-grid{
+	width:100%;
+	clear:both;
+	padding:0px 15px;
+	
+	.category{
+		background: $bg-grey;
+		text-align: center;
+		padding:15px 15px;
+		
+		@include respond-to(tablet){
+			@include col(33.3%,15px,15px);
+		}
+		
+		.content{
+			border:5px solid white;
+			background: $bg-grey;
+			text-align: center;
+			
+			.category-name{
+				font-size: 1.1em;
+				font-family: $sans-serif;
+				text-transform: uppercase;
+			}
+	    }
+	}
+}
+
+.category-sub-grid{
+	width:100%;
+	clear:both;
+	padding:0px 15px;
+	
+	.category{
+		background: $bg-grey;
+		text-align: center;
+		padding:15px 15px;
+		
+		@include respond-to(tablet){
+			@include col(25%,15px,15px);
+		}
+		
+		.content{
+			border:5px solid white;
+			background: $bg-grey;
+			text-align: center;
+			padding-bottom: 20px;
+			
+			.category-name{
+				font-size: 1.1em;
+				font-family: $sans-serif;
+				text-transform: uppercase;
+				height:26px
+			}
+			img{
+				width:100%;
+			}
+	    }
+	}
+}
+
+.slder{
+	margin: 0px 15px;
+}
+.featured_category_products{
+	clear:both;
+	display: none;
+	padding:0px 15px;
+	margin: 0px 15px;
+	margin-top:40px;
+	float: left;
+	width:96%;
+	position: relative;
+	text-align: center;
+	
+	@include clearfix();
+	
+	@include respond-to(tablet){
+		display:block;
+	}
+	
+	ul{
+		padding: 0px;
+		width:100%;
+	}
+	.item{
+		height:400px;
+		text-align:center
+		.product-info{
+			clear: both;
+			text-align: center;
+		}
+		.availability{
+			text-align: center;
+		}
+	}
+	.next-link{
+		background: url(../images/right-arrow-simple.png) no-repeat;
+		position:absolute;
+		top:35%;
+		right:0px;
+		width:12px;
+		height:50px;
+		display: block;
+		text-indent: -9999px;
+		
+	}
+	.prev-link{
+		background: url(../images/left-arrow-simple.png) no-repeat;
+		position:absolute;
+		top:35%;
+		left:0px;
+		width:12px;
+		height:50px;
+		display: block;
+		text-indent: -9999px;
+	}
+	
+	h2{
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		font-size: 1.3em;
+		margin-bottom: 20px;
+	}
+
+	
+}
+
+

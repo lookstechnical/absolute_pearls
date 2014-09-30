@@ -1,0 +1,25 @@
+<div class="block block-account">
+    <div class="block-title">
+        <strong>
+            <span>
+                <?php echo Mage::getModel('cms/block')->load('account-company-info')->getTitle(); ?>
+            </span>
+        </strong>
+    </div>
+    <div class="block-content">
+	    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('account-company-info')->toHtml(); ?>
+    </div>
+</div>
+
+<div class="block block-account">
+    <div class="block-title">
+        <strong>
+            <span>
+                <?php echo Mage::getModel('cms/block')->load('account-customer-services')->getTitle(); ?>
+            </span>
+        </strong>
+    </div>
+    <div class="block-content">
+	    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('account-customer-services')->toHtml(); ?>
+    </div>
+</div>

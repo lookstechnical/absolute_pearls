@@ -4,104 +4,112 @@
 	text-align: center;
 	margin:20px;
 }
-
-.block-layered-nav{
-	background: $bg-grey;
-	@include respond-to(desktop){
-		background:none;
-	}
-	font-size: 16px;
-	
-	.block-title{
-		padding:10px 20px;
-		background: $blue url(../images/refine-by-arrow.png) no-repeat 98% 50%;
+.col-left{
+	.block-layered-nav{
+		background: $bg-grey;
+		padding:0px 10px;
 		@include respond-to(desktop){
-			background: $blue;
-			background-image: none;
+			padding:0px 15px;
+			background:none;
 		}
-		color:white;
-		font-family: $serif;
-		font-size: 1.125em;
-	}
-	.block-title.open{
-		background: $blue url(../images/arrow-down-shop-by.png) no-repeat 98% 50%;
-		@include respond-to(desktop){
-			background: $blue;
-			background-image: none;
-		}
-	}
-	.block-content {
-		display:none;
-		padding:10px 20px;
-		@include respond-to(desktop){
-			display: block;
-			padding:0px 0px;
-		}
-	}
-	
-	.block-subtitle{
-		display: none;
-	}
-	
-	ul{
-		list-style: none;
-	}
-	
-	#narrow-by-list{
-		font-size: 0.8125em;
-		list-style: none;
-		ol{
-			li{
-			list-style: none;
+		font-size: 16px;
+			.block-title{
+				padding:10px 20px;
+				background: $blue url(../images/refine-by-arrow.png) no-repeat 98% 50%;
+				@include respond-to(desktop){
+					background: $blue;
+					background-image: none;
+				}
+				color:white;
+				font-family: $serif;
+				font-size: 1.125em;
 			}
+			.block-title.open{
+				background: $blue url(../images/arrow-down-shop-by.png) no-repeat 98% 50%;
+				@include respond-to(desktop){
+					background: $blue;
+					background-image: none;
+				}
+			}
+			.block-content {
+				display:none;
+				padding:10px 20px;
+				@include respond-to(desktop){
+					display: block;
+					padding:0px;
+					background: none;
+				}
+			}
+			
+			.block-subtitle{
+				display: none;
+			}
+		
+		ul{
+			list-style: none;
 		}
 		
-		dt{
-			padding:0px 0px 20px;
+		#narrow-by-list{
+			font-size: 0.8125em;
 			list-style: none;
-			text-transform: uppercase;
-			color:$text-color;
-		}
-		dd{
-			list-style: none;
-		}
-		.filter_section{
-			background: $bg-grey;
-			margin-bottom:20px;
-			color:$blue;
+			ol{
+				li{
+				list-style: none;
+				}
+			}
 			
-			
-			@include respond-to(desktop){
-				display: block;
-				padding:10px 10px;
-				
-		     }
-		     
-		     a{
-			     margin-bottom:5px;
-		     }
-			
-			.count{
-				display: inline-block;
-				padding:0px 5px;
+			dt{
+				padding:0px 0px 20px;
+				list-style: none;
+				text-transform: uppercase;
 				color:$text-color;
 			}
-			
-			.filter_section{
-				padding: 0px;
-				margin: 0px;
+			dd{
+				list-style: none;
 			}
-		}
-		
-		.check-box{
+			.filter_section{
+				padding: 20px;
+				background: $bg-grey;
+				margin-bottom:5px;
+				color:$blue;
+				
+				
+				@include respond-to(desktop){
+					display: block;
+					
+			     }
+			     
+			     a{
+				     margin-bottom:5px;
+			     }
+				
+				.count{
+					display: inline-block;
+					padding:0px 5px;
+					color:$text-color;
+				}
+				
+				.filter_section{
+					padding: 0px;
+					background: $bg-grey;
+					margin-botton:0px;
+					
+					
+					@include respond-to(desktop){
+					
+					}
+				}
+			}
+			
+			.check-box{
+				
+			}
+			
+			
 			
 		}
-		
-		
-		
 	}
 }
-
 
 
 .toolbar{
@@ -109,34 +117,44 @@
 	clear:both;
 	width:100%;
 	font-size: 0.8em;
+	padding:0px 15px;
 	
 	.view-mode{
+	
+		a{
+			text-align: left;
+			text-indent: -9999px;
+		}
+		strong{
+			text-align: left;
+			text-indent: -9999px;
+		}
 		.grid{
 			background: url(../images/grid.png) no-repeat;
-			margin:0px 5px;
+			margin:0px 2px 0px 5px;
 			width:25px;
 			height: 25px;
-			text-indent: -99999px;
+			text-indent: -9999px;
 			display: inline-block;
 			top:-2px;
 			position: relative;
 		}
 		.list{
 			background: url(../images/list.png) no-repeat;
-			margin:0px 5px;
+			margin:0px 2px;
 			width:25px;
 			height: 25px;
-			text-indent: -99999px;
+			text-indent: -9999px;
 			display: inline-block;
 			top:-2px;
 			position: relative;
 		}
 		.grid-list{
 			background: url(../images/grid-list.png) no-repeat;
-			margin:0px 5px;
+			margin:0px 2px;
 			width:25px;
 			height: 25px;
-			text-indent: -99999px;
+			text-indent: -9999px;
 			display: inline-block;
 			top:-2px;
 			position: relative;
@@ -145,13 +163,59 @@
 	
 	.pager{
 		float:left;
-		width:50%
+		width:65%;
+		
+		.limiter{
+			float: left;
+			width:50%;
+			@include respond-to(tablet){
+				width:25%;
+			}
+		}
+		
+		.pages{
+			float: left;
+			width:50%;
+			
+			strong{
+				display: none;
+				
+				
+			}
+			ol{
+					list-style: none;
+					padding:0px;
+					margin: 0px;
+					
+					li{
+						display: block;
+						float:left;
+						width:18px;
+						height:18px;
+						background: $blue;
+						color:white;
+						margin:0px 2px;
+						text-align: center;
+						padding:0px;
+						
+						
+						a{
+							color:white;
+						}
+					}
+				}
+		}
 	}
 	
 	.sorter{
+		display: none;
 		text-align: right;
-		width:50%;
-		float:right;	
+		width:35%;
+		float:right;
+		
+		@include respond-to(tablet){
+			display:block;
+		}	
 		
 		.view-mode{
 			float:left;
@@ -160,6 +224,10 @@
 		.sort-by{
 			float:left;
 			width:50%;
+			
+			select{
+				margin:0px 0px 0px 5px;
+			}
 		}
 		.v-middle{
 			display:none;
@@ -185,20 +253,24 @@
 	.item{
 		list-style: none;
 		font-size: 0.8em;
-		padding-bottom:20px;
+		padding:0px 10px;
+		padding-bottom:60px;
+		
+		
 		@include respond-to(tablet){
-			@include col(33.3%,0px,0px);
+			@include col(33.3%,15px,15px);
+		}
+		
+		.view-button{
+			display: none;
 		}
 		
 		.product-image{
-			border-left:1px solid $light-grey;
+			border-right:1px solid $light-grey;
 			border-top:1px solid $light-grey;
 			border-bottom:1px solid $light-grey;
 			border-left:1px solid $light-grey;
-			@include respond-to(tablet){
-				border-right:none;
-			}
-
+			
 			display: block;
 			width:100%;
 			overflow: hidden;
@@ -208,10 +280,7 @@
 			}
 		}
 		
-		.product-image:nth-child(3n+3){
-			border-right:1px solid $light-grey;
-			background: green;
-		}
+		
 		
 		.product-name{
 			font-size: 16px;
@@ -223,6 +292,10 @@
 			}
 		}
 		
+		
+		.availability{
+			font-size: 1.1em;
+		}
 		
 		.price-box{
 			font-size: 16px;
@@ -251,24 +324,22 @@
 			}
 		}
 	}
-	.item.last{
-		.product-image{
-			border-right: 1px solid $light-grey;
-		}
-	}
 	
-	.item:last-child{
-		.product-image{
-			border-right: 1px solid $light-grey;
-		}
-	}
 	
 }
 
 .products-grid-max-3-col{
 	.item{
 		@include respond-to(tablet){
-			@include col(33.3,0px,0px);
+			@include col(33.3%,15px,15px);
+		}
+	}
+}
+
+.products-grid-max-2-col{
+	.item{
+		@include respond-to(tablet){
+			@include col(50%,15px,15px);
 		}
 	}
 }
@@ -276,7 +347,7 @@
 .products-grid-max-4-col{
 	.item{
 		@include respond-to(tablet){
-			@include col(25%,0px,0px);
+			@include col(25%,15px,15px);
 		}
 	}
 }
@@ -284,12 +355,15 @@
 .amshopby-filters-left{
 	.from{
 		@include col(40%,0px, 10px);
+		
 	}
 	.to{
 		@include col(40%,0px, 10px);
+		
 	}
 	.submit{
-		@include col(40%,0px, 0px);
+		@include col(20%,0px, 0px);
+		padding-top:20px;
 	}
 }
 #amshopby-price-url{
@@ -298,8 +372,67 @@
 #amshopby-price-from{
 	width:100%;
 	padding:5px 10px;
+	margin-top: 8px;
 }
 #amshopby-price-to{
 	width:100%;
 	padding:5px 10px;
+	margin-top: 8px;
+}
+
+#amshopby-price-btn{
+	width:50px;
+	padding:5px 10px;
+	background: white;
+	border-color: black;
+	text-transform: uppercase;
+	color:$text-color;
+}
+
+.amshopby-attr{
+	padding-right:10px;
+	display: inline-block;
+}
+
+
+.products-grid{
+
+	.item.last:after{
+		content:"";
+		clear:both;
+		display: block;
+		
+	}
+
+	.item.hover{
+		
+		float:left;
+		position:relative;
+		
+		.clear{
+			float:left;
+		}
+		
+		.container{
+			border:1px solid $blue;
+			position: absolute;
+			background: white;
+			z-index: 9999;
+		}
+		
+		.product-image{
+			border:none;
+		}
+		
+		.view-button{
+			display:block;
+			background: $blue;
+			padding:12px 15px;
+			margin:15px;
+			color: white;
+			text-transform: uppercase;
+			font-size: 1em;
+			
+		}
+	}
 }

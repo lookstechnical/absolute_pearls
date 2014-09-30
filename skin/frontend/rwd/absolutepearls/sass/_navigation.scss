@@ -60,7 +60,7 @@ nav.desktop{
 				li{
 					display: inline;
 					text-align: left;
-					
+					border:none;
 					
 					a{
 						font-size: 0.9em;
@@ -161,15 +161,24 @@ nav.desktop{
 
 	}
 }
-
+nav.mobile:after{
+	content:"";
+	clear:both;
+	display: block;
+}
 nav.mobile{
-	padding:10px 0 5px 0;
+	padding:10px 0px;
+	margin-bottom: 10px;
+	
+    @include respond-to(tablet){
+	    padding:10px 0 5px 0;
+	}
 	clear:both;
 	margin-bottom:10px;
 	
 	li{
 		list-style: none;
-		@include col(16%,5px,5px);
+		@include col(16.5%,5px,5px);
 		@include respond-to(tablet){
 			@include col(25%,10px,10px);
 		}
@@ -188,9 +197,9 @@ nav.mobile{
 	}
 	
 	.menu{
-		@include col(50%,5px,5px);
+		@include col(50%,10px,5px);
 		@include respond-to(tablet){
-			@include col(25%,10px,10px);
+			@include col(25%,15px,15px);
 		}
 
 	}
@@ -203,7 +212,7 @@ nav.mobile{
 		
 	}
 	
-	.search a{
+	.msearch a{
 		background: url(../images/searchicon.png) no-repeat center center;
 		text-indent: -9999px;
 		padding:8px 10px 8px 40px;
@@ -214,6 +223,50 @@ nav.mobile{
 		}
 		
 	}
+	
+		.searchbox{
+			display: none;
+			width:100%;
+			clear:both;
+			
+			#search_mini_form{
+				padding:20px 10px;
+				@include respond-to(tablet){
+					padding:20px 15px;
+				}
+				.input-box{
+					position: relative;
+				}
+				input{
+					padding:5px;
+					-webkit-appearance:none;
+					border:1px solid $light-grey;
+					height:35px;
+					width:100%;
+					box-sizing: border-box;
+				}
+				label{
+					display:none;
+					
+				}
+				button{
+					background: url(../images/searchbtn.png) center center;
+					border: 1px solid black;
+					text-indent: -9999px;
+					width:35px;
+					height:35px;
+					line-height:2.7em;
+					float:none;
+					padding: 0px;
+					display: inline-block;
+					top:0px;
+					right:0px;
+					position: absolute;
+					
+				}
+			}
+		}
+	
 	.my-account a{
 		background: url(../images/account-icon.png) no-repeat center center;
 		text-indent: -9999px;
@@ -260,17 +313,28 @@ border:none;
 		}
 	}
 }
-
+.breadcrumbs:after{
+	content:"";
+	clear:both;
+	display: block;
+}
 
 
 .breadcrumbs{
+	padding: 0px 15px;
+	display: block;
 	margin-bottom: 20px;
 	
 	@include respond-to(desktop){
-		@include col(100%,10px,10px);
+		@include col(100%,15px,15px);
 	}
 	
 	ul{
+		:after{
+			content: "";
+			clear:both;
+		}
+		
 		list-style: none;
 		margin:0;
 		padding: 0;

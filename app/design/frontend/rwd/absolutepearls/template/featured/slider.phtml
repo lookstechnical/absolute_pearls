@@ -1,8 +1,8 @@
 <?php
 $i = 0;
-$_columnCount = 5;
+$_columnCount = 4;
 $products = $this->getProducts();
-   $_helper = $this->helper('catalog/output');
+$_helper = $this->helper('catalog/output');
 ?>
 <div class="featured_products">
 	<h2>This week we love ...</h2>
@@ -38,7 +38,7 @@ $products = $this->getProducts();
                          class="product-list-image"/>
                 </a>
                 <div class="product-info">
-                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_product->getName(); ?></a></h2>
 					<?php if($_product->isSaleable()): ?>
                             <p class="availability out-of-stock"><span><?php echo $this->__('- IN STOCK -') ?></span></p>
                         <?php else: ?>
@@ -58,6 +58,7 @@ $products = $this->getProducts();
                  </div>
             </li>
 <?php endforeach; ?>
+
 
 </ul>
 <div class="clear"></div>

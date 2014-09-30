@@ -29,19 +29,108 @@ jQuery(document).ready(function($j) {
       source: "#nav"
     });
     
-    var $featuredProductSlider = $j('.featured_products products-grid').carouFredSel({
-        items               : 5,
+    var $featuredProductSlider = $j('.featured_products ul').carouFredSel({
+		items : {
+	        visible     : {
+	            min    : 3,
+	            max    : 4,
+	        },
+	        width       : 200
+	    },
+	    onCreate : function () {
+	        $j(this).parent().add( $j(this)).css('height',  $j(this).children().first().height() + 200 + 'px');
+	    },
+
+        infinite: true,        
+        responsive: true,
+        width: 330,
+        scroll : {
+            items           : 1,
+            duration        : 1000,                         
+            pauseOnHover    : true
+        },
+        next: {
+	        button: ".next-link"
+        },
+        previous: {
+	        button: ".prev-link"
+        }               
+    });
+    
+    
+    var $upsellSlider = $j('.box-up-sell ol').carouFredSel({
+		items : {
+	        visible     : {
+	            min    : 1,
+	            max    : 2,
+	        },
+	        width       : 200
+	    },
+        infinite: true,        
+        responsive: true,
+        width: 330,
+        scroll : {
+            items           : 1,
+            duration        : 1000,                         
+            pauseOnHover    : true
+        },
+        next: {
+	        button: ".next-link"
+        },
+        previous: {
+	        button: ".prev-link"
+        }               
+    });
+    
+    var $realtedSlider = $j('.block-related ol').carouFredSel({
+		items : {
+	        visible     : {
+	            min    : 1,
+	            max    : 2,
+	        },
+	        width       : 200
+	    },        
+	    infinite: true,        
+        responsive: true,
+        width: 330,
+        scroll : {
+            items           : 1,
+            duration        : 1000,                         
+            pauseOnHover    : true
+        },
+        next: {
+	        button: ".next-link"
+        },
+        previous: {
+	        button: ".prev-link"
+        }               
+    });
+    
+    
+
+    
+     var $featuredcatProductSlider = $j('.featured_category_products ul').carouFredSel({
+        items               : 3,
         infinite: true,        
         responsive: true,
         scroll : {
             items           : 1,
             duration        : 1000,                         
             pauseOnHover    : true
-        }                   
+        },
+        next: {
+	        button: ".next-link"
+        },
+        previous: {
+	        button: ".prev-link"
+        }               
     });
 
+    
+    
+   
 
-	 var $instagramScroller = $j('.instagram ul').carouFredSel({
+	 var $instagramScroller = $j('.instagram-slider ul').carouFredSel({
         items               : 5,
         infinite: true,        
         responsive: true,
@@ -49,7 +138,13 @@ jQuery(document).ready(function($j) {
             items           : 1,
             duration        : 1000,                         
             pauseOnHover    : true
-        }                   
+        },
+        next: {
+	        button: ".inst-next"
+        },
+        previous: {
+	        button: ".inst-previous"
+        }               
     });
     var ipadCallback = function() {
 	    $instagramScroller.trigger('configuration', [
@@ -65,12 +160,25 @@ jQuery(document).ready(function($j) {
 	            visible : 3
 	        }
 	    ], true);
+	    
+	    $featuredProductSlider.trigger('configuration', [
+	        'items', {
+	            visible : 3
+	        }
+	    ], true);
+
 	}
 	
 	var desktopcallback = function() {
 	    $instagramScroller.trigger('configuration', [
 	        'items', {
 	            visible : 5
+	        }
+	    ], true);
+	    
+	     $featuredProductSlider.trigger('configuration', [
+	        'items', {
+	            visible : 4
 	        }
 	    ], true);
 	}
@@ -119,22 +227,65 @@ jQuery(document).ready(function($j) {
     });
     
     
-   
-    $j("#nav ol li").hover(function () {
-         $j(this).siblings().find('ul').slideUp(400);
-         $j(this).find('ul').slideDown(400);        
-    }, function () {
-       $j(this).find('ul').slideUp(400);
+    $j('.msearch a').click(function(){
+	   $j('.searchbox').toggle();
     });
     
-    $j(".product-list-image").hover(function(){
+   
+    $j("#nav ol li").hover(function () {
+         $j(this).siblings().find('ul').hide();
+         $j(this).find('ul').show();        
+    }, function () {
+       $j(this).find('ul').hide();
+    });
+    
+   /* $j(".product-list-image").hover(function(){
 	    var hoverimg = $j(this).attr('hover');
 	    $j(this).attr('src',hoverimg);
     },function(){
         var oldsrc = $j(this).attr('default')
 	    $j(this).attr('src',oldsrc);
-    });
-   
-  
+    });*/
+    
+    $j(".products-grid .item").hover(function(){
+    	var h = $j(this).height();
+    	var cw = $j(this).find('.container').width();
+    	$j(this).css("height", h+60)
+    	$j(this).find('.container').css("width", cw);
 
+	    $j(this).addClass('hover');
+    },function(){
+        $j(this).removeClass('hover'); 
+        $j(this).css("height", "")   
+        $j(this).find('.container').css("width", '');
+    });
+
+
+   
+   
+	var allPanels = $j('.accordion > dd').hide();
+	
+	$j('.accordion > dt > a').click(function() {
+	  $this = $j(this);
+	  $target =  $this.parent().next();
+	
+	  if(!$target.hasClass('active')){
+	     allPanels.removeClass('active').slideUp();
+	     $target.addClass('active').slideDown();
+	  }
+	  
+	return false;
+	});
+  
+   /* $j(".form-list input").each(function(index,elem){
+	    var eid = $j(elem).attr('id');
+	    var label = null;
+	    label = $j(elem).parent().parent().find("label")
+	    if(eid && (label.length == 1)) {
+	    	var html = $j(label).html();
+	    	html = html.replace('<em>*</em>',' ');
+		    $j(elem).attr('placeholder',html);
+		    $j(label).remove();
+	    }
+    })*/
 });

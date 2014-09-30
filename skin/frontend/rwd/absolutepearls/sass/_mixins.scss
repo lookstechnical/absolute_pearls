@@ -33,6 +33,14 @@
     }
 }
 
+@mixin myclearfix() {
+	:after{
+		content:"";
+		display:block;
+		clear:both;
+    }
+}
+
 @mixin col($width,$padl,$padr) {
 	width:$width;
 	padding-left:$padl;

@@ -26,17 +26,23 @@ footer{
 		}
 		
 		.contact-us{
+		
 			@include respond-to(tablet){
 				display:block;
 				min-height:190px;
-				@include col(33%,10px,10px);
+				@include col(33%,15px,15px);
 				text-align: left;
 				
 			}
 			@include respond-to(desktop){
-				@include col(25%,20px,20px);
+				@include col(25%,15px,15px);
 			}
 			
+			.content{
+				@include respond-to(desktop){
+					border-right:1px solid $light-grey;
+				}
+			}
 			
 			h4{
 				padding-top:20px;
@@ -107,22 +113,25 @@ footer{
 			h4{
 				border:1px solid $light-grey;
 				padding:10px;
+				cursor: pointer;
 				@include respond-to(tablet){
 					border:none;
 					padding:0px;
 					padding-bottom: 20px;
+					cursor: default;
 				}
 			}
 			
 			@include respond-to(tablet){
 				display:block;
 				min-height:190px;
-				@include col(33%,10px,10px);
+				@include col(33%,12px,15px);
 				text-align: left;
+				
 				
 			}
 			@include respond-to(desktop){
-				@include col(25%,10px,10px);
+				@include col(25%,15px,15px);
 				
 			}
 			ul{
@@ -131,27 +140,51 @@ footer{
 					display:block;
 				}
 			}
+			
+			ul.open{
+				padding: 20px 0px;
+			}
+		
+			
+			.content{
+				@include respond-to(tablet){
+					border-right:1px solid $light-grey;
+				}
+			}
 		}
 		.customer-services{
+			ul.open{
+				padding: 20px 0px;
+			}
+		
 			h4{
 				border:1px solid $light-grey;
 				padding:10px;
+				cursor: pointer;
 				@include respond-to(tablet){
 					border:none;
 					padding:0px;
 					padding-bottom: 20px;
+					cursor: default;
+				}
+			}
+			
+			.content{
+				
+				@include respond-to(tablet){
+					border-right:1px solid $light-grey;
 				}
 			}
 			
 			@include respond-to(tablet){
 				display:block;
 				min-height:190px;
-				@include col(33%,10px,10px);
+				@include col(33%,15px,15px);
 				text-align: left;
 				
 			}
 			@include respond-to(desktop){
-				@include col(25%,10px,10px);
+				@include col(25%,15px,15px);
 				
 			}
 			ul{
@@ -162,12 +195,26 @@ footer{
 			}
 		}
 		.newsletter{
+			@include col(100%,15px,15px);
+			input[type=email]{
+			   padding:10px;
+			}
+			input[type=submit]{
+				border:1px solid black;
+				background: white;
+				text-align: center;
+				padding:8px 20px;
+				text-transform: uppercase;
+				font-size: 0.85em;
+			}
+	
 			@include respond-to(desktop){
 				display:block;
 				min-height:190px;
-				@include col(25%,20px,10px);
+				@include col(25%,15px,15px);
 			}
 		}
+
 	}
 	
 	.security{

@@ -22,7 +22,7 @@
 	}
 	
 	.promos{
-		
+		@include clearfix();
 		.left-column{
 			margin-bottom:20px;
 			clear:both;
@@ -62,6 +62,7 @@
 		background: $bg-grey;
 		padding:20px 100px;
 		clear:both;
+		position: relative;
 		h3{
 			text-transform: uppercase;
 			margin-bottom: 20px;
@@ -73,6 +74,30 @@
 			
 		}
 		
+		.inst-next{
+			background: url(../images/right-arrow-simple.png) no-repeat;
+			position: absolute;
+			top:50%;
+			right:40px;
+			display: block;
+			text-indent: -9999px;
+			z-index: 100;
+			width:30px;
+			height:30px;
+		}
+		
+		.inst-prev{
+			background: url(../images/left-arrow-simple.png) no-repeat;
+			position: absolute;
+			top:50%;
+			left:40px;
+			display: block;
+			text-indent: -9999px;
+			z-index: 100;
+			width:30px;
+			height:30px;
+		}
+		
 				
 		ul{
 			list-style: none;
@@ -80,6 +105,7 @@
 			padding:0px;
 			clear:both;
 			width:100%;
+			margin-bottom:20px;
 			li{
 				display: block;
 				float:left;
@@ -98,52 +124,84 @@
 					max-width: 100%;
 				}
 			}
+			
+			@include clearfix();
 		}
+		
+		
 	}
 }
 
 .featured_products{
 	clear:both;
 	display: none;
-	padding:0px 30px;
+	padding:20px;
+	margin-top:40px;
+	width:100%;
 	position: relative;
+	
+	@include clearfix();
+	
 	@include respond-to(tablet){
 		display:block;
 	}
+	
 	.next-link{
 		background: url(../images/right-arrow-simple.png) no-repeat;
 		position:absolute;
-		top:50%;
-		width:20px;
+		top:35%;
+		right:0px;
+		width:12px;
 		height:50px;
+		display: block;
+		text-indent: -9999px;
 		
 	}
 	.prev-link{
 		background: url(../images/left-arrow-simple.png) no-repeat;
 		position:absolute;
-		top:50%;
-		width:20px;
+		top:35%;
+		left:0px;
+		width:12px;
 		height:50px;
+		display: block;
+		text-indent: -9999px;
 	}
 	
 	h2{
 		margin-bottom: 20px;
 	}
+	.caroufredsel_wrapper{
+		padding:20px;
+	}
 	.products-grid{
+		
+		
 		.item{
+			
+			text-align: center;
+			box-sizing: border-box;
+			
 			@include respond-to(tablet){
-					@include col(33.3%,0px,0px)
+			    @include col(33.3%,15px,15px)
 			}
 			@include respond-to(desktop){
-				@include col(25%,0px,0px)
+				@include col(25%,15px,15px)
 			}
-				
+			
+			
+			.availability{
+				text-align: center;
+			}
+			
+			.price-box{
+				text-align: center;
+			}
 		}
 		
 	}
-	.products-grid:last-child{
-			border-right: 1px solid $light-grey
-		}
+	
+	
 }
 
 .underline{

@@ -10,7 +10,7 @@ html {
 .clear{clear:both;display: block}
 
 @include font-face('Lato', 'Lato-Regular', 'Lato', 'sans-serif');
-@include font-face('Calluna', 'Calluna-Regular-webfont', 'Calluna', 'serif');
+@include font-face('Calluna-old', 'Calluna-Regular-webfont', 'Calluna', 'serif');
 
 $sans-serif:"Lato" sans-serif;
 $serif:"Calluna" serif;
@@ -24,18 +24,27 @@ body{
 	line-height: 1.3em;
 }
 
-h1{font-family: "calluna" serif;font-size:1.5em}
-h2{font-family: "calluna" serif;font-size:1.5em}
-h3{font-family: "calluna" serif;}
+h1{font-family: $serif serif;font-size:1.5em; font-weight: 300}
+h2{font-family: $serif serif;font-size:1.5em; font-weight: 300}
+h3{font-family: $serif serif; font-weight: 300}
 h4{font-size: 0.92em; text-transform: uppercase;}
 a{color:$link-color; text-decoration: none;}
 p{padding-bottom: 10px}
 
+ul{
+	padding:20px;
+}
+
+.page-title{
+	h1,h2,h3,h4{
+		margin-bottom: 20px;
+	}
+}
 .wrapper{
 	padding:0px 0px;
 	width:100%;
 	@include respond-to(desktop){
-		max-width:1170px;
+		max-width:1200px;
 		margin:0 auto;
 		padding:0px;
 	}
@@ -48,7 +57,7 @@ p{padding-bottom: 10px}
 }
 
 .main-container{
-	@include col(100%,10px,10px);
+	@include col(100%,0px,0px);
 }
 
 .validation-failed{
@@ -84,6 +93,7 @@ button{
 	background: $success-color;
 	color:white;
 	padding:10px;
+	margin-bottom: 20px;
 	
 	li{
 		background: url(../images/success.png) no-repeat left center;
@@ -95,9 +105,100 @@ button{
 	background: $error-color;
 	color:white;
 	padding:10px;
+	margin-bottom: 20px;
 	li{
 		background: url(../images/alert.png) no-repeat left center;
 		padding-left: 20px;
 	}
 
+}
+
+
+.col2-left-layout{
+	.col-left{
+		@include respond-to(tablet){
+			@include col(20%,0px,10px);
+		}
+	}
+	.col-main{
+		@include respond-to(tablet){
+			@include col(80%,10px, 0px);
+		}
+	}
+}
+
+
+.col-left{
+	.block{
+		margin-bottom: 20px;
+		
+		.block-title{
+			background: $blue;
+			color:white;
+			padding:5px 10px;
+			text-transform: uppercase;
+			strong{
+				span{
+					font-family: $serif;
+					font-weight: 100;
+					
+				}
+			}
+		}	
+		
+		.block-content{
+			background: $light-grey;
+			padding:20px;
+			
+		
+			ul{
+				list-style: none;
+				
+			}
+		}
+	}
+}
+
+.col2-right-layout{
+	.col-main{
+		@include respond-to(tablet){
+			@include col(80%,10px,10px)
+		}
+	}
+	.col-right{
+		@include respond-to(tablet){
+			@include col(20%,10px,10px)
+		}
+	}
+}
+
+.block-viewed{
+	margin-bottom: 20px;
+	.block-title{
+		background: $blue;
+		color:white;
+		padding:5px 20px;
+		font-family: $serif;
+		text-transform: uppercase;
+	}
+	.block-content{
+		background: $bg-grey;
+		padding:20px;
+	}
+}
+
+.block-compare{
+	margin-bottom: 20px;
+	.block-title{
+		background: $blue;
+		color:white;
+		padding:5px 20px;
+		font-family: $serif;
+		text-transform: uppercase;
+		
+	}
+	.block-content{
+		background: $bg-grey;
+		padding:20px;
+	}
 }

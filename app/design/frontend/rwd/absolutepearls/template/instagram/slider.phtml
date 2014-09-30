@@ -2,6 +2,8 @@
 
 $images = $this->getInstagramImages();?>
 <div class="instagram-slider">
+<a href="#" class="inst-next">Next</a>
+<a href="#" class="inst-prev">Next</a>
 <h3>#<?php echo $this->getHashtag() ?><span class="underline"></span></h3>
 <p>tag a photo on <span></span> for a chance to be featured in our gallery</p>
 <ul>
@@ -12,7 +14,6 @@ $images = $this->getInstagramImages();?>
 </li>
 
 <?php endforeach; ?>
-<li class="clear"></li>
 </ul>
 <a class="link-button" href="view_more">view more</a>
 </div>

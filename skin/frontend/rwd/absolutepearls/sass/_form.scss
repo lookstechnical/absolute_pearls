@@ -7,10 +7,21 @@ p.required{
 }
 
 input[type=text],input[type=email],input[type=password],input[type=tel]{
-	padding:5px 10px;
-	font-size: 0.8em;
+	padding:8px 10px;
+	font-size: 0.9em;
 	width:100%;
 	margin-bottom: 10px;
+	border: 1px solid $light-grey;
+}
+
+.form-list{
+	list-style: none;
+	width:75%;
+	padding: 0px;
+	
+	ul{
+		padding: 0px;
+	}
 }
 
 .check-box{
@@ -30,6 +41,11 @@ input[type=checkbox],input[type=radio]{
 		float:right;
 		color:$red;
 	}
+}
+
+label{
+	padding-bottom: 5px;
+	display: inline-block;
 }
 
 input[type=checkbox] + label,input[type=radio] + label  {
@@ -54,7 +70,7 @@ div.block-layered-nav dd a.amshopby-attr-selected{
 
 div.block-layered-nav dd a.amshopby-attr{
 	background:url(../images/checkbox.png) left bottom no-repeat;
-	padding:0px 0px 0px 20px;
+	padding:0px 5px 0px 20px;
 }
 
 .block-layered-nav #narrow-by-list ol li{
@@ -84,4 +100,20 @@ div.block-layered-nav dd a.amshopby-attr{
 		}	
 	}
 	
+}
+
+*:focus{
+	outline:0;
+}
+
+::-webkit-input-placeholder {
+	color: $text-color
+}
+
+::-mox-placeholder {
+	color: $text-color
+}
+
+:-mox-placeholder {
+	color: $text-color
 }

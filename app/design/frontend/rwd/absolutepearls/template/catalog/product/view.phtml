@@ -52,7 +52,7 @@
 
             <div class="product-shop">
                 <div class="product-name">
-                    <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                    <h1><?php echo  $_product->getName() ?></h1>
                 </div>
 
                 <div class="price-info">
@@ -83,38 +83,73 @@
                     <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
                 <?php endif;?>
 
+
+	            <div class="add-to-cart-wrapper">
+	                <?php echo $this->getChildHtml('product_type_data') ?>
+	                <?php echo $this->getChildHtml('extrahint') ?>
+	
+	                <?php if (!$this->hasOptions()):?>
+	                    <div class="add-to-box">
+	                        <?php if($_product->isSaleable()): ?>
+	                            <?php echo $this->getChildHtml('addtocart') ?>
+	                            <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+	                                <span class="or"><?php echo $this->__('OR') ?></span>
+	                            <?php endif; ?>
+	                        <?php endif; ?>
+	                        <?php echo $this->getChildHtml('addto') ?>
+	                        <?php echo $this->getChildHtml('sharing') ?>
+	                    </div>
+	                    <?php echo $this->getChildHtml('extra_buttons') ?>
+	                <?php elseif (!$_product->isSaleable()): ?>
+	                    <div class="add-to-box">
+	                        <?php echo $this->getChildHtml('addto') ?>
+	                        <?php echo $this->getChildHtml('sharing') ?>
+	                    </div>
+	                <?php endif; ?>
+	            </div>
+	            
+	            <div class="contact">
+	            	<p>Got a question about this product? <a>Email Us</a> or Call us on</br>
+					<?php echo '09939393939393' ?></br>
+					Well be happy to help!
+	            </div>
+	            
+	            <div class="product-collateral">
+    	
+				    <dl class="accordion">
+			
+						<dt><a href="">Description</a></dt>
+						<dd>
+						<?php echo $_helper->productAttribute($_product, $_product->getDescription(), 'description') ?>
+						</dd>
+						
+						<dt><a href="">Details</a></dt>
+						<dd>
+						
+						</dd>
+						
+						<dt><a href="">Delivery & Returns</a></dt>
+						<dd>
+						
+						</dd>
+						
+						<dt><a href="">Reviews</a></dt>
+						<dd>
+							
+						</dd>
+						
+					</dl>
+			    </div>
+            
             </div>
 
-            <div class="add-to-cart-wrapper">
-                <?php echo $this->getChildHtml('product_type_data') ?>
-                <?php echo $this->getChildHtml('extrahint') ?>
-
-                <?php if (!$this->hasOptions()):?>
-                    <div class="add-to-box">
-                        <?php if($_product->isSaleable()): ?>
-                            <?php echo $this->getChildHtml('addtocart') ?>
-                            <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                                <span class="or"><?php echo $this->__('OR') ?></span>
-                            <?php endif; ?>
-                        <?php endif; ?>
-                        <?php echo $this->getChildHtml('addto') ?>
-                        <?php echo $this->getChildHtml('sharing') ?>
-                    </div>
-                    <?php echo $this->getChildHtml('extra_buttons') ?>
-                <?php elseif (!$_product->isSaleable()): ?>
-                    <div class="add-to-box">
-                        <?php echo $this->getChildHtml('addto') ?>
-                        <?php echo $this->getChildHtml('sharing') ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-
-            <?php // echo $this->getChildHtml('related_products') ?>
+            
 
             <div class="clearer"></div>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
             <?php endif;?>
+            
         </form>
         <script type="text/javascript">
         //<![CDATA[
@@ -167,9 +202,10 @@
             }.bind(productAddToCartForm);
         //]]>
         </script>
+        
     </div>
 
-    <div class="product-collateral toggle-content tabs">
+   <!-- <div class="product-collateral toggle-content tabs">
         <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
             <dl id="collateral-tabs" class="collateral-tabs">
                 <?php foreach ($detailedInfoGroup as $alias => $html):?>
@@ -180,11 +216,13 @@
                 <?php endforeach;?>
             </dl>
         <?php endif; ?>
-    </div>
-
+    </div>-->
+    
+    
+	<?php echo $this->getChildHtml('related_products') ?>
     <?php echo $this->getChildHtml('upsell_products') ?>
-     <?php echo $this->getChildHtml('crosssell_products') ?>
-    <?php echo $this->getChildHtml('product_additional_data') ?>
+       <?php // echo $this->getChildHtml('product_additional_data') ?>
+    <?php echo $this->getChildHtml('product_viewed');  ?>
 	<div class="our-promise">
 		<div class="border">
 			<div class="content">

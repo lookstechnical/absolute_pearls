@@ -1,7 +1,7 @@
 <?php
 
 
-class Webtise_Absolutepearls_Block_Featured_Slider extends Mage_Catalog_Block_Product_List
+class Webtise_Absolutepearls_Block_Featured_Slider extends Mage_Core_Block_Template
 {
 
 	public function getProducts()

@@ -25,6 +25,8 @@
 @import "checkout-cart";
 @import "checkout-onepage";
 @import "promos";
+@import "customer-account";
+@import "category";
 
 
 
@@ -117,7 +119,7 @@ a.button{
 .col3-layout{
 	.col-left{
 		@include respond-to(desktop){
-			@include col(25%,10px,10px);
+			@include col(25%,0px,0px);
 		}
 			
 	}
@@ -128,7 +130,7 @@ a.button{
 	
 	.col-main{
 		@include respond-to(desktop){
-			@include col(75%,10px,10px);
+			@include col(75%,0px,0px);
 		}
 	}
 }

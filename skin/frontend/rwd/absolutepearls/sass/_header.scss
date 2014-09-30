@@ -12,21 +12,21 @@
 		
 		@include respond-to(desktop){
 			display:block;
-			@include col(50%,10px,10px)
+			@include col(50%,15px,15px)
 		}
 		
 		.secure-msg{
 			color:white;
 			text-transform: uppercase;
 			font-size: 0.8em;
-			padding:10px 0px 10px 20px;
-			background: url(../images/truck.png) no-repeat left center;
+			padding:6px 0px 10px 20px;
+			background: url(../images/truck.png) no-repeat left 6px;
 		}
 	}
 	
 	.account-links{
 		@include respond-to(desktop){
-			@include col(50%,10px,10px)
+			@include col(50%,15px,15px)
 		}
 		color:white;
 		text-transform: uppercase;
@@ -58,7 +58,7 @@ header{
 		@include respond-to(desktop){
 			display:block;
 			padding-top:30px;
-			@include col(30%,10px,10px);
+			@include col(30%,15px,15px);
 			background: white;
 			color:$text-color;
 			

@@ -3,21 +3,32 @@
 	 <div class="wrapper">
 	 	<div class="mobile-acordion">
 		<div class="company-info">
-			<h4>Company info</h4>
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('company-info-links')->toHtml(); ?>
+			<div class="content">
+				<h4>Company info</h4>
+			    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('company-info-links')->toHtml(); ?>
+			</div>
 		</div>
 		<div class="customer-services">
-			<h4>Customer Services</h4>
-			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('customer-services-links')->toHtml(); ?>
+			<div class="content">
+			    <h4>Customer Services</h4>
+			    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('customer-services-links')->toHtml(); ?>
+			</div>
 		</div>
 		</div>
 		<div class="contact-us">
+			<div class="content">
 			<h4>How to contact us</h4>
 			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('contact-us-links')->toHtml(); ?>
+			</div>
 		</div>
 		<div class="newsletter">
-
-			
+			<div class="content">
+			<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('newsletter-footer')->toHtml(); ?>
+			<form>
+				<input type="email" name="" placeholder="Email Address"/>
+				<input type="submit" value="Sign up!" />
+			</form>
+			</div>
 		</div>
 	 </div>
 	 <div class="clear"></div>
