@@ -52,7 +52,11 @@
                     </div>
                 </div>
             </li>
+            
         <?php endforeach ?>
+        <?php if(count($this->getItems()) == 1): ?>
+            	<li></li>
+            <?php endif;?>
         </ol>
         <script type="text/javascript">decorateList('block-related', 'none-recursive')</script>
     </div>

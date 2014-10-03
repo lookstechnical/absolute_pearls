@@ -48,6 +48,30 @@
             
             <div class="product-img-box">
                 <?php echo $this->getChildHtml('media') ?>
+                
+                <div class="social">
+	                
+	                <ul>
+	                	<li>Share</li>
+	                	<li class="facebook">
+		                	<a href="http://www.facebook.com/sharer.php?url=<?php echo urlencode(Mage::helper('core/url')->getCurrentUrl())?>">facebook</a>
+	                	</li>
+						<li class="twitter">
+							<a href="http://www.twitter.com/share?url=<?php echo urlencode(Mage::helper('core/url')->getCurrentUrl())?>">twitter</a>
+						</li>
+						<li class="googleplus">
+							<a href="https://plus.google.com/share?url=<?php echo urlencode(Mage::helper('core/url')->getCurrentUrl())?>">google plus</a>
+						</li>
+						<li class="pinterest">
+							<a href="http://pinterest.com/pin/create/button/?url=<?php echo urlencode(Mage::helper('core/url')->getCurrentUrl())?>&media=<?php echo Mage::helper('catalog/image')->init($_product, 'thumbnail');?>">
+							pinterest
+						    </a>
+						</li>
+						<li class="instagram">
+							<a href="https://instagram.com/share?url=<?php echo urlencode(Mage::helper('core/url')->getCurrentUrl())?>">instagram</a>
+						</li>
+	                </ul>
+                </div>
             </div>
 
             <div class="product-shop">
@@ -226,8 +250,9 @@
 	<div class="our-promise">
 		<div class="border">
 			<div class="content">
-				content heloo our promise
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('our-promise')->toHtml(); ?>
 			</div>
 		</div>
 	</div>
+	<div class="clear"></div>
 </div>

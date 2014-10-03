@@ -3,7 +3,8 @@ $i = 0;
 $_columnCount = 4;
 $products = $this->getProducts();
 $_helper = $this->helper('catalog/output');
-?>
+if(count($products) > 6): ?>
+
 <div class="featured_products">
 	<h2>This week we love ...</h2>
 	<a href="#" class="next-link">Next</a>
@@ -63,3 +64,4 @@ $_helper = $this->helper('catalog/output');
 </ul>
 <div class="clear"></div>
 </div>
+<?php endif; ?>

@@ -25,8 +25,8 @@ $_categories = $this->getMainChldCategories();
 	            <?php echo $this->htmlEscape($_category->getName()) ?>
 	            </a>
 	        </div>
-	         <div class="category-description ">
-	            <?php echo $this->htmlEscape($_category->getDescription()) ?>
+	         <div class="category-description">
+	            <?php echo $this->htmlEscape($this->getCurrentCategory()->getDescription()) ?>
 	        </div>
         </div>
     </div>
@@ -61,9 +61,6 @@ $_categories = $this->getMainChldCategories();
 	            <a href="<?php echo $_category->getURL() ?>" title="<?php echo $this->htmlEscape($_category->getName()) ?>">
 	            <?php echo $this->htmlEscape($_category->getName()) ?>
 	            </a>
-	        </div>
-	         <div class="category-description ">
-	            <?php echo $this->htmlEscape($_category->getDescription()) ?>
 	        </div>
         </div>
     </div>

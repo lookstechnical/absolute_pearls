@@ -50,6 +50,9 @@
         <?php endfor; ?>
       
     <?php endfor; ?>
+     <?php if(count($this->getItemCollection()->getItems()) == 1): ?>
+            	<li></li>
+            <?php endif;?>
     </ol>
     <script type="text/javascript">decorateTable('upsell-product-table')</script>
     </div>

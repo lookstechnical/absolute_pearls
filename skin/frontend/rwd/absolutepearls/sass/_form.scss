@@ -86,34 +86,20 @@ div.block-layered-nav dd a.amshopby-attr{
 	}
 }
 
-#checkout-review-table{
-	width: 100%
-}
 
-.block-progress{
-	
-	dl{
-		margin:20px 0px;
-	
-		div{
-			border:1px solid $light-grey;
-		}	
-	}
-	
-}
 
 *:focus{
 	outline:0;
 }
 
 ::-webkit-input-placeholder {
-	color: $text-color
+	color: #757784
 }
 
 ::-mox-placeholder {
-	color: $text-color
+	color: #757784
 }
 
 :-mox-placeholder {
-	color: $text-color
+	color: #757784
 }

@@ -27,8 +27,25 @@
 @import "promos";
 @import "customer-account";
 @import "category";
+@import "checkout-success";
 
+.checkout-cart-index{
+	.col-main{
+		padding:0px 10px;
+		@include respond-to(desktop){
+			padding:0px 15px;
+		}
+	}
+}
 
+.cms-no-route{
+	.col-main{
+		padding:0px 15px;
+	}
+	ul{
+		padding:20px;
+	}
+}
 
 
 a.button{
@@ -62,6 +79,12 @@ a.button{
 		
 		.product-name{
 			text-align: left;
+			font-size: 0.9em;
+			text-transform: none;
+			
+			a{
+				color: $text-color;
+			}
 		}
 		
 		.product-image{
@@ -76,6 +99,7 @@ a.button{
 		
 		.product-details{
 			float: left;
+			width:50%;
 			padding-top: 6px;
 			position: relative;
 			height:81px;;
@@ -84,6 +108,7 @@ a.button{
 				position: absolute;
 				bottom: 0px;
 				left:0px;
+				font-size: 0.9em;
 			}
 			
 		}
@@ -98,6 +123,8 @@ a.button{
 	
 	.subtotal{
 		margin:10px 0px;
+		font-weight: bold;
+		text-transform: none;
 		.label{
 			float: left;
 			padding:0;
@@ -155,4 +182,16 @@ a.button{
   /* Theme Settings */
   background: $bg-grey;
   border:1px solid $light-grey;
+}
+
+input.validation-failed{
+	border-color: red;
+}
+.validation-failed{
+	border-color: red;
+}
+
+.validation-advice{
+	
+	color:$red;
 }

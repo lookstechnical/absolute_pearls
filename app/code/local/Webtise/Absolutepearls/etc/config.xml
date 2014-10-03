@@ -6,7 +6,11 @@
     </Webtise_Absolutepearls>
   </modules>
   <global>
- 
+  	<helpers>
+  		<absolutepearls>
+                <class>Webtise_Absolutepearls_Helper</class>
+        </absolutepearls>
+  	</helpers>
   	 <models>
             <absolutepearls>
                 <class>Webtise_Absolutepearls_Model</class>
@@ -104,7 +108,19 @@
 							<title>Promos Module</title>
 							<sort_order>10</sort_order>
 						</Webtise_Absolutepearls>
+						<system>
+	                        <children>
+	                            <config>
+	                                <children>
+	                                    <absolutepearls>
+	                                        <title>Inchoo - All</title>
+	                                    </absolutepearls>
+	                                </children>
+	                            </config>
+	                        </children>
+	                    </system>
 					</children>
+					
 				</admin>
 			</resources>
 		</acl>
@@ -115,5 +131,5 @@
 				</promos>
 			</updates>
 		</layout>
-    </adminhtml> 
+    </adminhtml>     
 </config>

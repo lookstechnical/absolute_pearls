@@ -23,6 +23,7 @@
 	
 	.promos{
 		@include clearfix();
+		padding:0px 15px;
 		.left-column{
 			margin-bottom:20px;
 			clear:both;
@@ -170,6 +171,7 @@
 	
 	h2{
 		margin-bottom: 20px;
+		text-transform: uppercase;
 	}
 	.caroufredsel_wrapper{
 		padding:20px;

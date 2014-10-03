@@ -130,7 +130,7 @@
 			text-indent: -9999px;
 		}
 		.grid{
-			background: url(../images/grid.png) no-repeat;
+			background: url(../images/grids.png) -8px -8px no-repeat;
 			margin:0px 2px 0px 5px;
 			width:25px;
 			height: 25px;
@@ -139,8 +139,11 @@
 			top:-2px;
 			position: relative;
 		}
+		strong.grid{
+			background: url(../images/grids.png) -8px -50px no-repeat;
+		}
 		.list{
-			background: url(../images/list.png) no-repeat;
+			background: url(../images/grids.png) -41px -8px  no-repeat;
 			margin:0px 2px;
 			width:25px;
 			height: 25px;
@@ -149,8 +152,11 @@
 			top:-2px;
 			position: relative;
 		}
+		strong.list{
+			background: url(../images/grids.png) -41px -50px  no-repeat;
+		}
 		.grid-list{
-			background: url(../images/grid-list.png) no-repeat;
+			background: url(../images/grids.png) -74px -8px no-repeat;
 			margin:0px 2px;
 			width:25px;
 			height: 25px;
@@ -158,6 +164,9 @@
 			display: inline-block;
 			top:-2px;
 			position: relative;
+		}
+		strong.grid-list{
+			background: url(../images/grids.png) -74px -50px  no-repeat;
 		}
 	}
 	
@@ -202,6 +211,9 @@
 						a{
 							color:white;
 						}
+					}
+					.current{
+						background: $dark-blue;
 					}
 				}
 		}

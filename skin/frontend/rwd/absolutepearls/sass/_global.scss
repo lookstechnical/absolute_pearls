@@ -10,9 +10,11 @@ html {
 .clear{clear:both;display: block}
 
 @include font-face('Lato', 'Lato-Regular', 'Lato', 'sans-serif');
+@include font-face('Lato-light', 'Lato-Light', 'Lato', 'sans-serif');
 @include font-face('Calluna-old', 'Calluna-Regular-webfont', 'Calluna', 'serif');
 
 $sans-serif:"Lato" sans-serif;
+$sans-serif-light:"Lato-light" sans-serif;
 $serif:"Calluna" serif;
 
 body{
@@ -32,7 +34,7 @@ a{color:$link-color; text-decoration: none;}
 p{padding-bottom: 10px}
 
 ul{
-	padding:20px;
+	//padding:20px;
 }
 
 .page-title{
@@ -60,16 +62,8 @@ ul{
 	@include col(100%,0px,0px);
 }
 
-.validation-failed{
-	border-color: red;
-}
 
-.validation-advice{
-	position: absolute;
-	top:10px;
-	color:$red;
-	text-align:center;
-}
+
 
 .link-button{
 	display: inline-block;

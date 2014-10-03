@@ -141,6 +141,7 @@
 		    <?php echo $this->getChildHtml('coupon') ?>
 	    </div>
     </div>
+    
      <div class="totals">
             <?php echo $this->getChildHtml('totals'); ?>
             <?php if(!$this->hasError()): ?>
@@ -153,11 +154,14 @@
             </ul>
             <?php endif; ?>
      </div>
+     <div class="">
+	    <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><span><span><?php echo $this->__('Continue Shopping') ?></span></span></button>
+    </div>
     
 </div>
 
 <div class="cart-help">
-	<h2>Can we Help?</h2>
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('cart-help')->toHtml(); ?>
 </div>
 
 

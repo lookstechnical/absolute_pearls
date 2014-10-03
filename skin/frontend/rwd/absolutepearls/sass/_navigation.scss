@@ -29,12 +29,12 @@ nav.desktop{
 			
 			a{
 				text-transform: uppercase;
-				font-size: 1em;
+				font-size: 0.925em;
 				color:$nav-color;
 				display: block;
-                padding: 0px 0.8em;
+                padding: 0px 1em;
                 @include respond-to(desktop-large){
-	                padding: 0px 1.3em; 
+	                padding: 0px 1.6em; 
                 }
 			}
 			
@@ -63,10 +63,10 @@ nav.desktop{
 					border:none;
 					
 					a{
-						font-size: 0.9em;
+						font-size: 0.925em;
 						text-transform: none;
 						color:$link-color;
-						padding:5px 10px;
+						padding:5px 15px;
 					}
 					a:hover{
 						background: $link-color;
@@ -340,10 +340,9 @@ border:none;
 		padding: 0;
 		clear:both;
 		li{
-			font-size: 0.8em;
+			font-size: 0.85em;
 			float:left;
 			a{
-				font-size: 1.1em;
 			}
 			span{
 				color:$link-color;

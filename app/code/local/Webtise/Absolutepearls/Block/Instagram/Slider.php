@@ -16,8 +16,10 @@ class Webtise_Absolutepearls_Block_Instagram_Slider extends Mage_Core_Block_Temp
 	
 	public function getInstagramImages()
 	{
-			$this->hashtag = "pearls";
-			$client_id ="bb7813192f5c44828cf925c88da3b8de";
+			$this->hashtag = Mage::getStoreConfig('absolutepearls/home_group/instagram_tag',Mage::app()->getStore());
+
+			$client_id = Mage::getStoreConfig('absolutepearls/home_group/instagram_api',Mage::app()->getStore());
+			//bb7813192f5c44828cf925c88da3b8de
 			$url = 'https://api.instagram.com/v1/tags/'.$this->hashtag.'/media/recent?client_id='.$client_id;
 			$ch = curl_init($url); 
 			 

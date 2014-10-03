@@ -1,29 +1,60 @@
 .checkout-onepage-index {
+    .col-main{
+	    padding:0px 10px;
+	    
+    }
 	.button{
 		text-transform: uppercase;
 		padding:8px 30px;
-		font-size: 1.2em;
+		font-size: 1.143em;
 		font-weight: 200;
 	}
 	.page-title{
 		margin-bottom: 20px;
+		
+		h1{
+			font-size: 1.71em;
+			text-transform: uppercase;
+		}
 	}
 	
 	.col-main{
 		width:100%;
 		
-		@include respond-to(tablet){
-			@include col(75%,0px, 10px);
+		@include respond-to(desktop){
+			@include col(75%,15px, 15px);
 		}
 	}
 	.col-right{
 		display:none;
-		
-		@include respond-to(tablet){
+		@include respond-to(desktop){
 			display: block;
-			@include col(25%,10px, 0px);
+			@include col(25%,15px, 15px);
+		}
+		
+		#checkout-progress-wrapper{
+			border:1px solid $light-grey;
+			margin-bottom:15px;
+			
+			.block-title{
+				background: $bg-grey;
+				font-family: $serif ;
+				font-weight: 100;
+				font-size: 1.14em;
+				padding:15px 0px;;
+				text-transform: uppercase;
+				text-align: center;
+				
+				strong{
+					font-weight: 100;
+				}
+			}
+			.block-content{
+				padding:15px;
+			}
 		}
 	}
+	
 	#checkoutSteps{
 		list-style: none;
 		
@@ -40,16 +71,26 @@
 		padding:5px 20px;
 		width:100%;
 		background: $bg-grey;
+		.number{
+			font-size: 0.86em;
+		}
 		h2{
 			font-family: $sans-serif;
-			font-size: 1em;
+			font-size: 0.86em;
 			display: inline-block;
 			text-transform: uppercase;
 		}
 		a{
+			float: right;
 			display: none;
 		}
+		
 	}
+	.allow{
+			a{
+				display: block;
+			}
+		}
 	.step{
 		border-left:1px solid $light-grey;
 		border-right:1px solid $light-grey;
@@ -69,6 +110,10 @@
 	}
 	
 	.col-1{
+		float:left;
+		position: relative;
+		width:100%;
+		padding-bottom: 20px;
 		@include respond-to(tablet){
 			display: block;
 			@include col(45%,0px, 0px);
@@ -77,7 +122,7 @@
 		h3{
 			text-transform: uppercase;
 			font-family: $sans-serif;
-			font-size: 0.9em;
+			font-size: 1em;
 			margin-bottom: 20px;
 		}
 		
@@ -117,6 +162,9 @@
 	}
 		
 	.col-2{
+		float:left;
+		position: relative;
+		width:100%;
 		@include respond-to(tablet){
 			display: block;
 			border-left:1px solid $light-grey;
@@ -126,7 +174,7 @@
 		h3{
 			text-transform: uppercase;
 			font-family: $sans-serif;
-			font-size: 0.9em;
+			font-size: 1em;
 			margin-bottom: 20px;
 		}
 	}
@@ -135,12 +183,235 @@
 		display: none;
 	}
 	
-	.forgot-password-link{
+	a.forgot-password-link{
 		font-size: 0.8em;
 		display: inline-block;
 		padding:0px 10px;
 		line-height: 2.6em;
 	}
+
+	.changelink{
+		text-transform: uppercase;
+	}	
+	
+	address{
+		
+		font-style: normal;
+	}
+	
 	
 }
 
+#checkout-review-table{
+	width: 100%
+}
+
+.block-progress{
+	dl{
+		margin:20px 0px;
+	
+		div{
+			color:$dark-blue;
+			padding-bottom:5px;
+			
+		}	
+	}
+	
+	dd.complete{
+		margin-bottom: 15px;
+		padding-left:15px;
+
+	}
+	
+	.block-title{
+		border-bottom:1px solid $light-grey;
+	}
+	
+}
+
+.order-sumary{
+	border:1px solid $light-grey;
+	
+	.cart-contents{
+		padding-bottom: 15px;
+	}
+	.cart-contents:after{
+		clear: both;
+		content: "";
+		display:block;
+	}
+	
+	h2{
+		border-bottom:1px solid $light-grey;
+		text-align: center;
+		background: $bg-grey;
+		text-transform: uppercase;
+		font-size: 16px;
+		padding:8px 0px;
+	}
+	#cart-sidebar{
+		border:none;
+	}
+	.item{
+		list-style: none;
+		padding:15px;
+		margin-bottom: 15px;
+		.product-image{
+			border:1px solid $light-grey;
+			padding:15px;
+			float:left;
+			width:35%;
+			
+			img{
+				width:100%;
+			}
+		}
+		.product-details{
+			padding:0px 10px;
+			font-size: 0.85em;
+			float:left;
+			width:50%;
+			
+			.price{
+				font-size: 1.2em;
+			}
+			.product-name{
+				
+				a{
+					color:	$text-color
+				}
+			}
+			.btn-remove{
+				display: none;
+			}
+			.btn-edit{
+				display: none;
+			}
+		}
+	}
+	
+	.total{
+		clear: both;
+		border-top: 1px solid $light-grey;
+		
+		.subtotal{
+			padding: 8px 15px;
+			
+			.label{
+				text-align: left;
+			}
+			.price{
+				float: right;
+				text-align: right;
+			}
+			
+		}
+	}
+}
+
+
+#checkout-review-table-wrapper{
+    clear:both;
+	padding:0px;
+	fieldset{
+			padding:0px;
+    }	
+	table{
+		width:100%;
+
+		th{
+			border-top:1px solid $light-grey;
+			border-bottom:1px solid $light-grey;
+			text-align: left;
+			margin-bottom: 10px;
+			padding:10px 0px;
+			text-transform: uppercase;
+		}
+		
+		.product-cart-image{
+			padding:10px 0px;
+			width:10%;
+			img{
+				border:1px solid $light-grey;
+			}
+		}
+		
+		.product-cart-info{
+			padding:10px 10px;
+			vertical-align: top;
+			width:70%;
+			.product-name{
+				font-family: $sans-serif;
+				font-size: 1em;
+				a{
+					color:$text-color;
+					font-size: 0.8em;
+				}
+			}
+		}
+		.product-cart-qty{
+			padding:0px 10px 0px 0px;
+			a{
+				display: block
+			}
+		}
+	}
+	
+}
+
+.totals{
+		
+		@include respond-to(tablet){
+			@include col(33.3%,0px, 0px);
+			float:right;
+		}
+
+	}
+	
+	.shopping-cart-totals-table{
+			width:100%;
+			margin:20px 0px;
+			text-transform: uppercase;
+				
+		tfoot{
+			td{
+				text-transform: uppercase;
+				font-size: 1.5em;
+			}
+		}
+		td{
+			padding:4px 0px;
+		}
+	}
+	
+	.a-right{
+		text-align: right;
+	}
+	.a-left{
+		text-align: left;
+	}
+
+#checkout-review-submit{
+	width: 100%;
+	clear:both;
+	padding-top:10px;
+	.f-left{
+		float: left;
+		width:50%;
+		padding:10px;
+		font-size: 0.8em;
+		
+		a{
+			display: inline-block;
+			padding: 0px 5px;
+		}
+	}
+	button{
+		background: #434a5f url(../images/padlock.png) no-repeat 20px center;
+		padding-left:54px;
+	}
+}
+
+#opc-review{
+	border-bottom: 1px solid $light-grey;
+}
