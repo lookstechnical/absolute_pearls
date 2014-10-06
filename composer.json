@@ -11,7 +11,10 @@
             ["app/code/local/Webtise/Absolutepearls", "app/code/local/Webtise/Absolutepearls"],
             ["app/etc/modules/Webtise_Absolutepearls.xml", "app/etc/modules/Webtise_Absolutepearls.xml"],
             ["demo", "media/demo"],
-            ["promos", "media/promos"]
+            ["promos", "media/promos"],
+            ["wiziwig/checkout", "media/wysiwyg/checkout"],
+            ["wiziwig/home", "media/wysiwyg/home"],
+            ["wiziwig/10_-off.png", "media/wysiwyg/10_-off.png"]
             
         ]
    }
