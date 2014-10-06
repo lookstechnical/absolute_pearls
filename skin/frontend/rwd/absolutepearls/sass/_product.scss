@@ -400,7 +400,7 @@
 		padding: 10px 0px;
 		dt{
 			border:1px solid $light-grey;
-			padding:5px 20px;
+			padding:5px 10px;
 			width:100%;
 			display: block;
 			cursor: pointer;
@@ -419,14 +419,49 @@
 		  dd {
 		  	 border:1px solid $light-grey;
 		    // border-top: 0; 
-		     padding:20px;
+		     padding:20px 10px;;
 		     font-size: 1em;
 		    
+		  }
+		  
+		  .spec_table{
+			  width: 100%;
+			  
+			  td{
+				  border-bottom: 1px solid $light-grey;
+				  padding:3px 0px;
+			  }
+			  tr{
+				  border-bottom: 1px solid $light-grey;
+			  }
+			  
+			  .tooltip{
+				  text-align: right;
+				  position: relative;
+				  .tooltip-link{
+				  	background: url(../images/question-icon.png);
+				  	display: inline-block;
+				  	width:18px;
+				  	height: 19px;
+				  }
+				  
+				  .tooltip-desc{
+				  	  background: white;
+					  border:1px solid $light-grey;
+					  padding:15px;
+					  position: absolute;
+					  display: none;
+					  z-index: 9999;
+					  width:200px;
+					  right:0px;
+				  }
+			  }
 		  }
 	}
 }
 
 .block-viewed{
+	position: relative;
 	clear:both;
 	padding-top:20px;
 	border-top:1px solid $light-grey;
@@ -444,6 +479,7 @@
 		}
 	}
 	.block-content{
+		position: relative;
 		background:none;
 		display: table;
 		margin:0 auto;
@@ -475,7 +511,7 @@
 }
 
 .box-up-sell{
-	
+	position: relative;
 	@include respond-to(tablet){
 		@include col(50%,10px,10px);
 	}
@@ -490,7 +526,7 @@
 		padding: 15px 30px;
 	}
 
-	.next-link{
+	.up-next-link{
 		background: url(../images/right-arrow-simple.png) no-repeat;
 		position:absolute;
 		top:35%;
@@ -501,7 +537,7 @@
 		text-indent: -9999px;
 		
 	}
-	.prev-link{
+	.up-prev-link{
 		background: url(../images/left-arrow-simple.png) no-repeat;
 		position:absolute;
 		top:35%;
@@ -582,7 +618,7 @@
 }
 
 .block-related{
-    
+    position: relative;
 	margin-bottom: 40px;
 	
 	@include respond-to(tablet){
@@ -599,7 +635,7 @@
 		font-size: 1.125em;
 	}
 	
-	.next-link{
+	.rel-next-link{
 		background: url(../images/right-arrow-simple.png) no-repeat;
 		position:absolute;
 		top:35%;
@@ -610,7 +646,7 @@
 		text-indent: -9999px;
 		
 	}
-	.prev-link{
+	.rel-prev-link{
 		background: url(../images/left-arrow-simple.png) no-repeat;
 		position:absolute;
 		top:35%;

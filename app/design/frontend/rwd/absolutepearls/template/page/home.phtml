@@ -54,7 +54,11 @@
                     <?php echo $this->getChildHtml('global_messages') ?>
                    
 					<div class="banner">
-					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('home-banner')->toHtml(); ?>
+					<?php $block =  $this->getLayout()->createBlock('absolutepearls/promos_collection'); 
+								$block->setCollectionName('home-banner');
+								echo $block->toHtml();
+							?>
+
 					</div>
 					
 					<div class="promos">

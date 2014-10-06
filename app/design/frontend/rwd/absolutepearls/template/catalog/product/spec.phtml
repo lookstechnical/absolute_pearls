@@ -1,0 +1,17 @@
+<?php
+$attributes = $this->getAttributes(); 
+?>
+<table class="spec_table">
+
+<?php foreach($attributes as $attribute): ?>
+<?php // var_dump($attribute); die(); ?>
+<tr>
+	<td><?php echo $attribute->getFrontendLabel() ?>:</td>
+	<td><?php echo $this->getAttributeValue($attribute->getAttributeCode()); ?></td>
+	<td class="tooltip">
+		<a class="tooltip-link"></a>
+		<div class="tooltip-desc"><?php echo $attribute->getNote(); ?></div></td>
+</tr>
+<?php endforeach; ?>
+
+</table>

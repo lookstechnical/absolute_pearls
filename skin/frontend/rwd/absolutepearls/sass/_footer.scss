@@ -218,14 +218,19 @@ footer{
 	}
 	
 	.security{
+		padding: 15px;
+		text-align: center;
 		img{
 			max-width: 100%;
 		}
+		
 	}
 	
 	.copyright{
+		padding:0px 10px;
 		text-align: center;
 		margin:20px 0px;
+		font-size: 0.94em;
 		line-height: 1.5em;
 	}
 	
@@ -233,5 +238,12 @@ footer{
 		display: block;
 		
 		
+	}
+}
+
+.mobile-none{
+	display: none;
+	@include respond-to(tablet){
+		display: inline-block;
 	}
 }

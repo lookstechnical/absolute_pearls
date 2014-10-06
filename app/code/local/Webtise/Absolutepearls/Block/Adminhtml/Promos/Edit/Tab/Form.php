@@ -15,11 +15,18 @@ class Webtise_Absolutepearls_Block_Adminhtml_Promos_Edit_Tab_Form extends Mage_A
           'name'      => 'title',
       ));
       
-      $fieldset->addField('sub_title', 'textarea', array(
+     /* $fieldset->addField('sub_title', 'textarea', array(
           'label'     => Mage::helper('cms')->__('Sub Title'),
           'class'     => '',
           'required'  => false,
           'name'      => 'sub_title',
+      ));*/
+      
+      $fieldset->addField('link', 'text', array(
+          'label'     => Mage::helper('cms')->__('Link'),
+          'class'     => '',
+          'required'  => false,
+          'name'      => 'link',
       ));
       
       $fieldset->addField('collection', 'text', array(

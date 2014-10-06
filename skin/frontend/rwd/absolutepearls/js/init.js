@@ -96,13 +96,13 @@ jQuery(document).ready(function($j) {
       source: "#nav"
     });
     
-    var $featuredProductSlider = $j('.featured_products ul').carouFredSel({
+    var featuredProductSlider = $j('.featured_products ul').carouFredSel({
 		items : {
 	        visible     : {
-	            min    : 3,
+	            min    : 2,
 	            max    : 4,
 	        },
-	        width       : 200
+	        width       : 300
 	    },
 	    onCreate : function () {
 	        $j(this).parent().add( $j(this)).css('height',  $j(this).children().first().height() + 20 + 'px');
@@ -111,6 +111,7 @@ jQuery(document).ready(function($j) {
         infinite: true,        
         responsive: true,
         width: 330,
+        height : 'auto',
         scroll : {
             items           : 1,
             duration        : 1000,                         
@@ -124,8 +125,9 @@ jQuery(document).ready(function($j) {
         }               
     });
     
+   
     
-    var $upsellSlider = $j('.box-up-sell ol').carouFredSel({
+    var upsellSlider = $j('.box-up-sell ol').carouFredSel({
 		items : {
 	        visible     : {
 	            min    : 1,
@@ -136,30 +138,59 @@ jQuery(document).ready(function($j) {
         infinite: true,        
         responsive: true,
         width: 330,
+        height : 'auto',
         scroll : {
             items           : 1,
             duration        : 1000,                         
-            pauseOnHover    : true
+            pauseOnHover    : true,
         },
         next: {
-	        button: ".next-link"
+	        button: ".up-next-link"
         },
         previous: {
-	        button: ".prev-link"
-        }               
+	        button: ".up-prev-link"
+        }           
     });
     
-    var $realtedSlider = $j('.block-related ol').carouFredSel({
+    var realtedSlider = $j('.block-related ol').carouFredSel({
 		items : {
 	        visible     : {
 	            min    : 1,
 	            max    : 2,
 	        },
 	        width       : 200
-	    },        
+	    },
 	    infinite: true,        
         responsive: true,
         width: 330,
+        height : 'auto',
+        scroll : {
+            items           : 1,
+            duration        : 1000,                         
+            pauseOnHover    : true
+        },
+        next: {
+	        button: ".rel-next-link"
+        },
+        previous: {
+	        button: ".rel-prev-link"
+        }               
+    });
+    
+    
+
+    
+     var featuredcatProductSlider = $j('.featured_category_products ul').carouFredSel({
+        items : {
+	        visible     : {
+	            min    : 1,
+	            max    : 3,
+	        },
+	        width       : 200
+	    },
+        infinite: true,        
+        responsive: true,
+        height : 'auto',
         scroll : {
             items           : 1,
             duration        : 1000,                         
@@ -172,35 +203,19 @@ jQuery(document).ready(function($j) {
 	        button: ".prev-link"
         }               
     });
-    
-    
 
     
-     var $featuredcatProductSlider = $j('.featured_category_products ul').carouFredSel({
-        items               : 3,
+    var instagramslider = $j('.instagram-slider ul').carouFredSel({
+        items : {
+	        visible     : {
+	            min    : 1,
+	            max    : 5,
+	        },
+	        width       : 200
+	    },
         infinite: true,        
         responsive: true,
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".next-link"
-        },
-        previous: {
-	        button: ".prev-link"
-        }               
-    });
-
-    
-    
-   
-
-	 var $instagramScroller = $j('.instagram-slider ul').carouFredSel({
-        items               : 5,
-        infinite: true,        
-        responsive: true,
+        height : 'auto',
         scroll : {
             items           : 1,
             duration        : 1000,                         
@@ -212,88 +227,86 @@ jQuery(document).ready(function($j) {
         previous: {
 	        button: ".inst-previous"
         }               
-    });
-    var ipadCallback = function() {
-	    $instagramScroller.trigger('configuration', [
-	        'items', {
-	            visible : 1
-	        }
-	    ], true);
+       });
+
+   
+
+	     
+    
+    
+    var iphoneCallback = function() {
+	  
+ 
+	    
+	    
 	}
 	
-	var iphoneCallback = function() {
-	    $instagramScroller.trigger('configuration', [
-	        'items', {
-	            visible : 3
-	        }
-	    ], true);
-	    
-	    $featuredProductSlider.trigger('configuration', [
-	        'items', {
-	            visible : 3
-	        }
-	    ], true);
+	var ipadCallback = function() {
+	   
+
+	   
 
 	}
 	
 	var desktopcallback = function() {
-	    $instagramScroller.trigger('configuration', [
-	        'items', {
-	            visible : 5
-	        }
-	    ], true);
+
+	 
 	    
-	     $featuredProductSlider.trigger('configuration', [
-	        'items', {
-	            visible : 4
-	        }
-	    ], true);
+	    
 	}
 
 
        
-    enquire.register('(max-width: 40em)', {
+    enquire.register('(min-width: 40.1em) and  (max-width: 64em)', {
         match: function () {
         	ipadCallback();
-            $j('.mobile-acordion h4').click(function(){
-            	$j(this).parent().parent().find('ul').hide();
-            	var open = $j(this).parent().find('ul').hasClass('open');
-            	if(open){
-	            	  $j(this).parent().parent().find('ul').removeClass('open');
-            	} else {
-	            	$j(this).parent().find('ul').addClass('open');
-	                $j(this).parent().find('ul').show();
-            	}
-				
-            	
-            });
-            
-          
         },
         unmatch: function () {
             $j('.mobile-acordion').find('ul').show(); 
-            
         }
     });
     
     
      
-    enquire.register('(max-width: 64em)', {
+    enquire.register('(min-width: 0em) and  (max-width: 40em)', {
     
         match: function () {
         	iphoneCallback();
-            $j('.block-layered-nav').click(function(){
-            	$j(this).find('.block-content').slideToggle(); 	
-            	$j(this).find('.block-title').toggleClass("open");
-            });
+            
             
         },
         unmatch: function () {
             $j('.block-layered-nav').find('block-content').show(); 
-            desktopcallback();
         }
     });
     
+    enquire.register('(min-width: 64.1em)', {
+    
+        match: function () {
+        	desktopcallback();            
+        },
+        unmatch: function () {
+
+        }
+    });
+
+	$j('.mobile-acordion h4').click(function(){
+    	$j(this).parent().parent().find('ul').hide();
+    	var open = $j(this).parent().find('ul').hasClass('open');
+    	if(open){
+        	  $j(this).parent().parent().find('ul').removeClass('open');
+    	} else {
+        	$j(this).parent().find('ul').addClass('open');
+            $j(this).parent().find('ul').show();
+    	}
+		
+    	
+    });
+    
+    $j('.block-layered-nav').click(function(){
+    	$j(this).find('.block-content').slideToggle(); 	
+    	$j(this).find('.block-title').toggleClass("open");
+    });
     
     $j('.msearch a').click(function(){
 	   $j('.searchbox').toggle();
@@ -366,5 +379,9 @@ jQuery(document).ready(function($j) {
 		zoomWindowWidth:510,
    }); 
    
-   
-   });
+	$j('.tooltip-link').hover(function(){
+		$j(this).parent().find('.tooltip-desc').show();
+	},function(){
+		$j(this).parent().find('.tooltip-desc').hide();
+	});  
+});
