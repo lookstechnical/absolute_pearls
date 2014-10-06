@@ -10,13 +10,13 @@ class Webtise_Absolutepearls_Block_Landing_Products extends Mage_Core_Block_Temp
 		$category = $layer->getCurrentCategory();
 		
 		$subCat = $category->getMostWantedCategories();
-        $category = Mage::getModel('catalog/category')->load(16);
+       // $category = Mage::getModel('catalog/category')->load(16);
 
 		$products = Mage::getModel('catalog/product')->getCollection();
 		Mage::getSingleton('catalog/product_status')->addVisibleFilterToCollection($products);
 		Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCollection($products); 
 		
-		$products->addCategoryFilter($category);
+		$products->addCategoryFilter($subCat);
 		
 		return $products;
 	}
