@@ -7,7 +7,9 @@
         $_imgHtml = $_helper->categoryAttribute($_category, $_imgHtml, 'image');
     }
 ?>
+<?php if($this->isContentMode()): ?>
 
 <?php if($_imgUrl): ?>
     <?php  echo $_imgHtml ?>
+<?php endif; ?>
 <?php endif; ?>
