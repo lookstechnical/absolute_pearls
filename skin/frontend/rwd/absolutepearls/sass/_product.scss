@@ -20,9 +20,6 @@
 	@include respond-to(desktop){
 		
 		@include col(15%,10px,10px);
-		position: absolute;
-		top:0px;
-		right: 0px;
 		float:right;
 		
 		

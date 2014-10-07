@@ -168,7 +168,7 @@
             </div>
 
             
-
+			
             <div class="clearer"></div>
             <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                 <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
@@ -228,7 +228,13 @@
         </script>
         
     </div>
-
+	<div class="our-promise">
+		<div class="border">
+			<div class="content">
+				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('our-promise')->toHtml(); ?>
+			</div>
+		</div>
+	</div>
    <!-- <div class="product-collateral toggle-content tabs">
         <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
             <dl id="collateral-tabs" class="collateral-tabs">
@@ -247,12 +253,6 @@
     <?php echo $this->getChildHtml('upsell_products') ?>
        <?php // echo $this->getChildHtml('product_additional_data') ?>
     <?php echo $this->getChildHtml('product_viewed');  ?>
-	<div class="our-promise">
-		<div class="border">
-			<div class="content">
-				<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('our-promise')->toHtml(); ?>
-			</div>
-		</div>
-	</div>
+	
 	<div class="clear"></div>
 </div>
