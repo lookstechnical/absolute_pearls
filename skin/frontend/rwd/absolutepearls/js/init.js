@@ -203,6 +203,31 @@ jQuery(document).ready(function($j) {
 	        button: ".prev-link"
         }               
     });
+    
+    var homeslider = $j('.banner .promo-collection').carouFredSel({
+        items : {
+	        visible     : {
+	            min    : 1,
+	            max    : 1,
+	        },
+	        width       : 200
+	    },
+        infinite: true,        
+        responsive: true,
+        height : 'auto',
+        scroll : {
+            items           : 1,
+            duration        : 1000,                         
+            pauseOnHover    : true
+        },
+        next: {
+	        button: ".next-link"
+        },
+        previous: {
+	        button: ".prev-link"
+        }               
+    });
+
 
     
     var instagramslider = $j('.instagram-slider ul').carouFredSel({

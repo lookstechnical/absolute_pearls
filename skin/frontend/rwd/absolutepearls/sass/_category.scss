@@ -27,6 +27,12 @@
 	   }
 	}
 }
+.category-header.full{
+	padding: 0px 0px;
+	.content{
+		padding:60px 35px;
+	}
+}
 
 .note-msg{
 	padding:0px 15px;
@@ -183,4 +189,13 @@
 	
 }
 
+
+.category-image{
+	margin-left:15px;
+	width:100%;
+	
+	img{
+		width: 100%;
+	}
+}
 
