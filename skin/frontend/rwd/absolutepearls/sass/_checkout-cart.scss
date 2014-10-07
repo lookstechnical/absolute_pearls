@@ -14,6 +14,21 @@
 #cart-sidebar{
 	background: white;
 	border:1px solid $light-grey;
+	
+	.details{
+				display: none;
+	}
+	
+	.item-options{
+		dt, dd{
+			width: 30%; 
+			float: left;
+		}
+	}
+	
+	.product-name{
+		line-height:1.1em
+	}
 }
 
 .cart{

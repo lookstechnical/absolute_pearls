@@ -411,4 +411,10 @@ jQuery(document).ready(function($j) {
 	},function(){
 		$j(this).parent().find('.tooltip-desc').hide();
 	});  
+	
+	
+	var groupedProduct = $j('.grouped-items-table-wrapper').length;
+	if(groupedProduct){
+		$j('body').addClass('grouped-product');
+	}
 });

@@ -102,6 +102,11 @@
                  </div>
                  	<a href="<?php echo $_product->getProductUrl() ?>" class="view-button">View Details</a>
             	</div>
+            	
+            	<?php  $promoIcon = $product->getAttributeText('promo_icon');
+            	if($promoIcon): ?>
+            		<span class="<?php echo $promoIcon; ?>"></span>
+            	<?php endif; ?>
             </li>
             <?php /*if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
             <?php endif*/ ?>

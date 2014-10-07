@@ -288,6 +288,11 @@
 
 		}
 	}
+	.add-to-cart-wrapper:after{
+		content: "";
+		display: block;
+		clear:both;
+	}
 	
 	.qty-wrapper{
 		margin-bottom: 10px;
@@ -755,4 +760,22 @@
 		}
 	}
 
+}
+
+
+.grouped-items-table{
+	width: 100%;
+	.qty-wrapper{
+		input{
+			width:50px;
+		}
+	}
+}
+
+.grouped-product{
+	.product-essential {
+		.add-to-links{
+			padding: 0px;
+		}
+	}
 }
