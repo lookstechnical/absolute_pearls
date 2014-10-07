@@ -480,7 +480,7 @@
 	.two-square{
 		    @include col(100%,0px,0px);
 			@include respond-to(tablet) {
-				@include col(25%,0px,10px);
+				@include col(25%,15px,15px);
 			}
 				
 			img{
