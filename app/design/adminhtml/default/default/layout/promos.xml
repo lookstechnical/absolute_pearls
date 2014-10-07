@@ -5,4 +5,5 @@
             <block type="absolutepearls/adminhtml_promos" name="promo" />
         </reference>
     </promos_adminhtml_promos_index>
+    
 </layout>
