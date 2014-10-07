@@ -13,7 +13,7 @@ class Webtise_Absolutepearls_Block_Promos_Collection extends Mage_Core_Block_Tem
 	public function getCollection()
 	{
 		$collection = Mage::getModel('absolutepearls/promo')->getCollection()
-			->addFieldToFilter('collection',$this->collection)
+			->addFieldToFilter('collection',array('like' => '%'.$this->collection.'%'))
 			;//->sortBy('order','asc');
 		
 		return $collection;

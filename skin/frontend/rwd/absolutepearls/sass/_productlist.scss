@@ -469,3 +469,31 @@
 		}
 	}
 }
+
+.footer-promos{
+	
+	width:100%;
+	clear:both;
+	float:left;
+	padding: 0px 15px;
+	
+	.two-square{
+		    @include col(100%,0px,0px);
+			@include respond-to(tablet) {
+				@include col(25%,0px,10px);
+			}
+				
+			img{
+				width: 100%;
+			}
+			
+			
+	}
+		
+	
+	
+}
+
+.block-compare{
+	display: none;
+}

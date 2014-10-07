@@ -35,7 +35,6 @@ class Webtise_Absolutepearls_Model_Catalog_Resource_Category extends Mage_Catalo
         $collection
             ->addAttributeToFilter('is_active', 1)
             ->addAttributeToFilter('featured', 2)
-            ->addIdFilter('13,15,16')
             ->load();
             
             return $collection;

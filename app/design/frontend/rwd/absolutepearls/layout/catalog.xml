@@ -74,6 +74,7 @@ Category default layout
         <label>Catalog Category (Non-Anchor)</label>
         <reference name="left_first">
         	<block type="catalog/category_view" name="category_image" before="amshopby.navleft" template="catalog/category/image.phtml"/>
+
             <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml">
                 <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
             </block>
@@ -107,6 +108,9 @@ Category default layout
                 </block>
             </block>
         </reference>
+        <reference name="footer">
+        	<block type="core/template" name="product_list_promos" template="promos/product/list/footer.phtml" ></block>
+        </reference>
     </catalog_category_default>
 
 <!--
@@ -117,6 +121,7 @@ Category layered navigation layout
         <label>Catalog Category (Anchor)</label>
         <reference name="left_first">
         	<block type="catalog/category_view" name="category_image" before="amshopby.navleft" template="catalog/category/image.phtml"/>
+        	
             <block type="catalog/layer_view" name="catalog.leftnav" after="currency" template="catalog/layer/view.phtml">
                 <block type="core/text_list" name="catalog.leftnav.state.renderers" as="state_renderers" />
             </block>
@@ -154,6 +159,9 @@ Category layered navigation layout
                     <action method="setColumnCount"><count>4</count></action>
                 </block>
             </block>
+        </reference>
+         <reference name="footer">
+        	<block type="core/template" name="product_list_promos" template="promos/product/list/footer.phtml" />
         </reference>
     </catalog_category_layered>
 
