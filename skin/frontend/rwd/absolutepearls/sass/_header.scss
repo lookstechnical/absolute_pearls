@@ -126,6 +126,10 @@ header{
 			@include respond-to(desktop){
 			    display:block;
 		    }
+		    
+		    .input-box{
+			    position: relative;
+		    }
 			input{
 				padding:5px 10px;
 				-webkit-appearance:none;
@@ -133,6 +137,8 @@ header{
 				height:35px;
 				width:180px;
 				box-sizing: border-box;
+				margin-right: 35px;
+				position: relative;
 			}
 			label{
 				display:none;
@@ -149,6 +155,9 @@ header{
 				float:none;
 				padding: 0px;
 				display: inline-block;
+				position: absolute;
+				top:0px;
+				right:0px;
 			}
 		}
 		
