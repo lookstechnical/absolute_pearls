@@ -2,6 +2,8 @@
 	.col-main{
 		clear:both;
 	}
+	
+	
 }
 
 .product-view{
@@ -226,6 +228,32 @@
 			@include col(50%,10px,10px);
 		}
 		
+		.price-box{
+			font-size: 16px;
+			.price{
+				font-size:0.875em;
+			}
+			.old-price{
+				display: inline-block;
+				padding:0px 2px;
+				.price-label{
+					display: none;
+				}
+				.price{
+					text-decoration: line-through;
+				}
+			}
+			.special-price{
+				display: inline-block;
+				padding:0px 2px;
+				.price-label{
+					display: none;
+				}
+				.price{
+					color:$red;
+				}
+			}
+		}
 		
 		.in-stock{
 			

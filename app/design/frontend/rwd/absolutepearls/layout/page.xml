@@ -65,7 +65,7 @@
                 <action method="addItem"><type>skin_js</type><name>js/lib/jquery.cycle2.swipe.min.js</name></action>
                 <action method="addItem"><type>skin_js</type><name>js/lib/imagesloaded.js</name></action>
                 
-                 <action method="addItem"><type>skin_js</type><name>js/init.js</name></action>
+               
                
                 <action method="addItem"><type>skin_js</type><name>js/minicart.js</name></action>
 
@@ -148,11 +148,15 @@
                 <!--<block type="cms/block" name="footer_social_links">
                     <action method="setBlockId"><block_id>footer_social_links</block_id></action>
                 </block>-->
+                
             </block>
-
+			<block type="page/html_head" name="jsfooter" as="jsfooter" template="page/html/jsfooter.phtml">
+                  <action method="addItem"><type>skin_js</type><name>js/init.js</name></action>
+            </block>
             <block type="core/text_list" name="before_body_end" as="before_body_end" translate="label">
                 <label>Page Bottom</label>
                 <block type="page/html_cookieNotice" name="global_cookie_notice" as ="global_cookie_notice" template="page/html/cookienotice.phtml" before="-" />
+                
             </block>
         </block>
 

@@ -371,6 +371,8 @@ jQuery(document).ready(function($j) {
    
 	var allPanels = $j('.accordion > dd').hide();
 	
+	$j('.accordion > dd.active').show();
+	
 	$j('.accordion > dt > a').click(function() {
 	  $this = $j(this);
 	  $target =  $this.parent().next();
@@ -379,8 +381,8 @@ jQuery(document).ready(function($j) {
 	     allPanels.removeClass('active').slideUp();
 	     $target.addClass('active').slideDown();
 	  }
-	  
-	return false;
+
+	   return false;
 	});
   
    /* $j(".form-list input").each(function(index,elem){
