@@ -471,11 +471,14 @@
 }
 
 .footer-promos{
-	
+	display:none;
 	width:100%;
 	clear:both;
 	float:left;
 	padding: 0px 15px;
+	@include respond-to(desktop) {
+		display: block;
+	}
 	
 	.two-square{
 		    @include col(100%,0px,0px);
