@@ -96,18 +96,12 @@ $_helper = $this->helper('catalog/output');
                     
                     <?php 
                     $product = Mage::getModel("catalog/product")->load($_product->getId());
-                    foreach($product->getMediaGalleryImages() as $image){
-                    	
-                    	if($image->getData('position') == 2){
-                    	    $hoverimage = $image;
-                    	};
-                    }; 
+                   
                     ?>
 
                     <img id="product-collection-image-<?php echo $_product->getId(); ?>"
                          src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
                          alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" 
-                          hover="<?php echo $hoverimage->getData("url");?>"
                           default="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
                          class="product-list-image"/>
                 </a>
