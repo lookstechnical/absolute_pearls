@@ -216,6 +216,9 @@
 			</block>
 
     	</reference>
+    	 <reference  name="jsfooter">
+            <action method="addItem"><type>skin_js</type><name>js/home.js</name></action>
+        </reference>
     
     </home>
 

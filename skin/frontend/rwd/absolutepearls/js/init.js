@@ -95,196 +95,11 @@ jQuery(document).ready(function($j) {
       side: 'left',
       source: "#nav"
     });
-    
-    var featuredProductSlider = $j('.featured_products ul').carouFredSel({
-		items : {
-	        visible     : {
-	            min    : 2,
-	            max    : 4,
-	        },
-	        width       : 300
-	    },
-	    onCreate : function () {
-	        $j(this).parent().add( $j(this)).css('height',  $j(this).children().first().height() + 20 + 'px');
-	    },
-
-        infinite: true,        
-        responsive: true,
-        width: 330,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".next-link"
-        },
-        previous: {
-	        button: ".prev-link"
-        }               
-    });
-    
    
-    
-    var upsellSlider = $j('.box-up-sell ol').carouFredSel({
-		items : {
-	        visible     : {
-	            min    : 1,
-	            max    : 2,
-	        },
-	        width       : 200
-	    },
-        infinite: true,        
-        responsive: true,
-        width: 330,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true,
-        },
-        next: {
-	        button: ".up-next-link"
-        },
-        previous: {
-	        button: ".up-prev-link"
-        }           
-    });
-    
-    var realtedSlider = $j('.block-related ol').carouFredSel({
-		items : {
-	        visible     : {
-	            min    : 1,
-	            max    : 2,
-	        },
-	        width       : 200
-	    },
-	    infinite: true,        
-        responsive: true,
-        width: 330,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".rel-next-link"
-        },
-        previous: {
-	        button: ".rel-prev-link"
-        }               
-    });
-    
-    
-
-    
-     var featuredcatProductSlider = $j('.featured_category_products ul').carouFredSel({
-        items : {
-	        visible     : {
-	            min    : 1,
-	            max    : 3,
-	        },
-	        width       : 200
-	    },
-        infinite: true,        
-        responsive: true,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".next-link"
-        },
-        previous: {
-	        button: ".prev-link"
-        }               
-    });
-    
-    var homeslider = $j('.banner .promo-collection').carouFredSel({
-        items : {
-	        visible     : {
-	            min    : 1,
-	            max    : 1,
-	        },
-	        width       : 200
-	    },
-        infinite: true,        
-        responsive: true,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".next-link"
-        },
-        previous: {
-	        button: ".prev-link"
-        }               
-    });
-
-
-    
-    var instagramslider = $j('.instagram-slider ul').carouFredSel({
-        items : {
-	        visible     : {
-	            min    : 1,
-	            max    : 5,
-	        },
-	        width       : 200
-	    },
-        infinite: true,        
-        responsive: true,
-        height : 'auto',
-        scroll : {
-            items           : 1,
-            duration        : 1000,                         
-            pauseOnHover    : true
-        },
-        next: {
-	        button: ".inst-next"
-        },
-        previous: {
-	        button: ".inst-previous"
-        }               
-       });
-
-   
-
-	     
-    
-    
-    var iphoneCallback = function() {
-	  
- 
-	    
-	    
-	}
-	
-	var ipadCallback = function() {
-	   
-
-	   
-
-	}
-	
-	var desktopcallback = function() {
-
-	 
-	    
-	    
-	}
-
 
        
     enquire.register('(min-width: 40.1em) and  (max-width: 64em)', {
         match: function () {
-        	ipadCallback();
         },
         unmatch: function () {
             $j('.mobile-acordion').find('ul').show(); 
@@ -296,9 +111,7 @@ jQuery(document).ready(function($j) {
     enquire.register('(min-width: 0em) and  (max-width: 40em)', {
     
         match: function () {
-        	iphoneCallback();
-            
-            
+                        
         },
         unmatch: function () {
             $j('.block-layered-nav').find('block-content').show(); 
@@ -308,7 +121,6 @@ jQuery(document).ready(function($j) {
     enquire.register('(min-width: 64.1em)', {
     
         match: function () {
-        	desktopcallback();            
         },
         unmatch: function () {
 
@@ -397,15 +209,7 @@ jQuery(document).ready(function($j) {
 	    }
     })*/
     
-    $j('#product-image-main').elevateZoom({
-    	zoomType: "inner",
-		gallery:'more-views', 
-		cursor: 'pointer',
-		galleryActiveClass: 'active', 
-		imageCrossfade: true,
-		zoomWindowWidth:510,
-   }); 
-   
+       
 	$j('.tooltip-link').hover(function(){
 		$j(this).parent().find('.tooltip-desc').show();
 	},function(){
@@ -413,8 +217,5 @@ jQuery(document).ready(function($j) {
 	});  
 	
 	
-	var groupedProduct = $j('.grouped-items-table-wrapper').length;
-	if(groupedProduct){
-		$j('body').addClass('grouped-product');
-	}
+	
 });
