@@ -6,6 +6,7 @@
 }
 .col-left{
 	.block-layered-nav{
+		clear: both;
 		background: $bg-grey;
 		padding:0px 10px;
 		@include respond-to(desktop){

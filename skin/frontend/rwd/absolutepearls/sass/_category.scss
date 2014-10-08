@@ -1,6 +1,18 @@
 .category-header{
 	padding:0px 15px;
 	margin-bottom: 15px ;
+	width: 100%;
+	@include respond-to(tablet){
+		float: left;
+		width: 70%;
+		padding:0px 15px 0px 0px
+	}
+	
+	@include respond-to(desktop){
+		float: none;
+		width: 100%;
+	}
+	
 	.content{
 	padding:60px 20px;
 	background: $bg-grey;
@@ -199,7 +211,22 @@
 
 .category-image{
 	margin-left:15px;
-	width:100%;
+	width:30%;
+	float: left;
+	background: $bg-grey;
+	text-align: center;
+	vertical-align: middle;
+
+	@include respond-to(tablet){
+		padding: 0px;
+		margin: 0px;
+	}
+
+	@include respond-to(desktop){
+		width:100%;
+		float: none;
+		margin-left:15px;
+	}
 	
 	img{
 		width: 100%;
