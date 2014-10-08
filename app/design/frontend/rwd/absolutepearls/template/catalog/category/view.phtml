@@ -34,6 +34,7 @@
 <?php
     $_helper    = $this->helper('catalog/output');
     $_category  = $this->getCurrentCategory();
+    $category = Mage::getModel('catalog/category')->load($_category->getId());
     $_imgHtml   = '';
     if ($_imgUrl = $_category->getImageUrl()) {
         $_imgHtml = '<p class="category-image"><img src="'.$_imgUrl.'" alt="'.$this->escapeHtml($_category->getName()).'" title="'.$this->escapeHtml($_category->getName()).'" /></p>';
@@ -72,4 +73,10 @@
 
 <?php else: ?>
     <?php echo $this->getProductListHtml() ?>
+<?php endif; ?>
+
+<?php if($category->getData('seo_text')):?>
+	<div class="seo_description">
+		<?php echo $category->getData('seo_text'); ?>
+	</div>
 <?php endif; ?>

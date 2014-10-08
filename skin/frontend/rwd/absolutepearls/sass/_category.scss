@@ -148,7 +148,7 @@
 	clear:both;
 	display: none;
 	padding:0px 15px;
-	margin: 0px 15px;
+	margin: 0px 15px 15px;
 	margin-top:40px;
 	float: left;
 	width:96%;
@@ -208,6 +208,11 @@
 	
 }
 
+featured_category_products:after{
+	clear:both;
+	content: "";
+	display: block;
+}
 
 .category-image{
 	margin-left:15px;
@@ -233,3 +238,9 @@
 	}
 }
 
+.seo_description{
+	background: $bg-grey;
+	padding:30px 60px;
+	margin-bottom:15px;
+	clear:both;
+}
